@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Hadir">
+
+  <test name="Inventory Tests">
+    <parameter name="baseURL" value="https://magang.dikahadir.com/authentication/login"/>
+    <parameter name="username" value="admin@hadir.com"/>
+    <parameter name="password" value="MagangSQA_JC@123"/>
+    <classes>
+      <class name="com.juaracoding.tajuaracoding.Login.PositiveLogin"/>
+    </classes>
+  </test>
+
+</suite>
