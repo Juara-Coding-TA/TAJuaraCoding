@@ -7,8 +7,8 @@
     <parameter name="username" value="admin@hadir.com"/>
     <parameter name="password" value="MagangSQA_JC@123"/>
     <classes>
-      <class name="com.juaracoding.tajuaracoding.Login.PositiveLogin"/>
-      <class name="com.juaracoding.tajuaracoding.Login.NegativeLogin"/>
+      <class name="com.juaracoding.tajuaracoding.login.PositiveLogin"/>
+      <class name="com.juaracoding.tajuaracoding.login.NegativeLogin"/>
     </classes>
   </test>
 

@@ -1,9 +1,4 @@
 com\juaracoding\tajuaracoding\pages\components\Navbar.class
 com\juaracoding\tajuaracoding\pages\LoginPage.class
-<<<<<<< HEAD
-com\juaracoding\tajuaracoding\utils\DriverUtil.class
-=======
-com\juaracoding\tajuaracoding\App.class
 com\juaracoding\tajuaracoding\utils\DriverUtil.class
 com\juaracoding\tajuaracoding\pages\IzinTerlambatPage.class
->>>>>>> origin/laporan_izinterlambat

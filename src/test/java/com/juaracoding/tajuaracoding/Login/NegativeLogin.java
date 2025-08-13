@@ -1,42 +1,35 @@
-package com.juaracoding.tajuaracoding.Login;
+package com.juaracoding.tajuaracoding.login;
 
-import com.juaracoding.tajuaracoding.BaseTest;
 import com.juaracoding.tajuaracoding.pages.LoginPage;
 import com.juaracoding.tajuaracoding.utils.DriverUtil;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class NegativeLogin extends BaseTest {
+public class NegativeLogin {
 
     @Test
-    public void InvalidEmail (){
-        // Initialize the LoginPage with the current driver
+        public void InvalidEmail() {
         LoginPage loginPage = new LoginPage(DriverUtil.getDriver());
-
-        // Open the login page
+        // Langsung pakai loginPage dari BaseTest
         loginPage.openLoginPage();
 
-        // Input Username and Password
         loginPage.inputUsername("admin123@gmail.com");
         loginPage.inputPassword("MagangSQA_JC@123");
         loginPage.clickButton();
 
-        // Validate Error Message Not Null
-
         String actual = loginPage.getErrorMessage();
         System.out.println(actual);
-        Assert.assertEquals(actual,"Akun tidak ditemukan");
+        Assert.assertEquals(actual, "Akun tidak ditemukan");
 
         String currentUrl = loginPage.getCurrentUrl();
         System.out.println("Current URL: " + currentUrl);
     }
 
     @Test
-    public void InvalidPassword(){
+    public void InvalidPassword() {
         // Initialize the LoginPage with the current driver
         LoginPage loginPage = new LoginPage(DriverUtil.getDriver());
 
-        // Open the login page
         loginPage.openLoginPage();
 
         // Input Username and Password
@@ -51,5 +44,4 @@ public class NegativeLogin extends BaseTest {
         String currentUrl = loginPage.getCurrentUrl();
         System.out.println("Current URL: " + currentUrl);
     }
-
 }
