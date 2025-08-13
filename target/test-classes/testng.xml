@@ -8,6 +8,7 @@
     <parameter name="password" value="MagangSQA_JC@123"/>
     <classes>
       <class name="com.juaracoding.tajuaracoding.Login.PositiveLogin"/>
+      <class name="com.juaracoding.tajuaracoding.Login.NegativeLogin"/>
     </classes>
   </test>
 

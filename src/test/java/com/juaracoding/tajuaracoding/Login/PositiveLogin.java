@@ -10,9 +10,9 @@ import com.juaracoding.tajuaracoding.utils.DriverUtil;
 
 public class PositiveLogin extends BaseTest{
 
-    @Test
+    @Test(priority = 1)
     @Parameters({"username", "password"})
-    public void testLogin(String username, String password) {   
+    public void testLogin(String username, String password) throws InterruptedException {
         // Initialize the LoginPage with the current driver
         LoginPage loginPage = new LoginPage(DriverUtil.getDriver());
         
@@ -21,7 +21,7 @@ public class PositiveLogin extends BaseTest{
         
         // Perform login
         loginPage.login(username, password);
-        
+        Thread.sleep(100);
         // Verify successful login by checking the URL or any other element that indicates success
         String currentUrl = loginPage.getCurrentUrl();
         System.out.println("Current URL after login: " + currentUrl);

@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Hadir" class="navigator-link">
-              <span class="suite-name border-passed">Hadir</span>
+              <span class="suite-name border-failed">Hadir</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Hadir" class="navigator-link ">
-                    <span>C:\Users\adire\TAJuaraCoding\src\test\resources\testng.xml</span>
+                    <span>C:\Users\Administrator\Documents\GitHub\TAJuaraCoding\src\test\resources\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">3 methods, 1 failed,   2 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Hadir" class="hide-methods failed suite-Hadir"> (hide)</a> <!-- hide-methods failed suite-Hadir -->
+                      <a href="#" panel-name="suite-Hadir" class="show-methods failed suite-Hadir"> (show)</a> <!-- show-methods failed suite-Hadir -->
+                    </span>
+                    <div class="method-list-content failed suite-Hadir">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Hadir" title="com.juaracoding.tajuaracoding.Login.NegativeLogin" class="method navigator-link" hash-for-method="InvalidEmail">InvalidEmail</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Hadir -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -101,6 +115,11 @@
                       <a href="#" panel-name="suite-Hadir" class="show-methods passed suite-Hadir"> (show)</a> <!-- show-methods passed suite-Hadir -->
                     </span>
                     <div class="method-list-content passed suite-Hadir">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Hadir" title="com.juaracoding.tajuaracoding.Login.NegativeLogin" class="method navigator-link" hash-for-method="InvalidPassword">InvalidPassword</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Hadir" title="com.juaracoding.tajuaracoding.Login.PositiveLogin" class="method navigator-link" hash-for-method="testLogin(admin@hadir.com, MagangSQA_JC@123)">testLogin(admin@hadir.com, MagangSQA_JC@123)</a> <!-- method navigator-link -->
@@ -118,6 +137,41 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Hadir" class="panel Hadir">
+          <div class="suite-Hadir-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.juaracoding.tajuaracoding.Login.NegativeLogin</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="InvalidEmail">
+                  </a> <!-- InvalidEmail -->
+                  <span class="method-name">InvalidEmail</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [Akun tidak ditemukan] but found []
+	at com.juaracoding.tajuaracoding.Login.NegativeLogin.InvalidEmail(NegativeLogin.java:28)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+... Removed 35 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Hadir-class-failed -->
+          <div class="suite-Hadir-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.juaracoding.tajuaracoding.Login.NegativeLogin</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="InvalidPassword">
+                  </a> <!-- InvalidPassword -->
+                  <span class="method-name">InvalidPassword</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Hadir-class-passed -->
           <div class="suite-Hadir-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -137,7 +191,7 @@
         </div> <!-- panel Hadir -->
         <div panel-name="test-xml-Hadir" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\adire\TAJuaraCoding\src\test\resources\testng.xml</span>
+            <span class="header-content">C:\Users\Administrator\Documents\GitHub\TAJuaraCoding\src\test\resources\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -150,6 +204,7 @@
     &lt;parameter name=&quot;username&quot; value=&quot;admin@hadir.com&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.juaracoding.tajuaracoding.Login.PositiveLogin&quot;/&gt;
+      &lt;class name=&quot;com.juaracoding.tajuaracoding.Login.NegativeLogin&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Inventory Tests --&gt;
 &lt;/suite&gt; &lt;!-- Hadir --&gt;
@@ -163,7 +218,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Inventory Tests (1 class)</span>
+                <span class="test-name">Inventory Tests (2 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -189,16 +244,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(3);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'testLogin')
 data.setCell(0, 2, 'com.juaracoding.tajuaracoding.Login.PositiveLogin')
-data.setCell(0, 3, 454);
+data.setCell(0, 3, 356);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'InvalidPassword')
+data.setCell(1, 2, 'com.juaracoding.tajuaracoding.Login.NegativeLogin')
+data.setCell(1, 3, 258);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'InvalidEmail')
+data.setCell(2, 2, 'com.juaracoding.tajuaracoding.Login.NegativeLogin')
+data.setCell(2, 3, 258);
 window.suiteTableData['Hadir']= { tableData: data, tableDiv: 'times-div-Hadir'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 454 ms</span>
+              <span class="suite-total-time">Total running time: 872 ms</span>
               <div id="times-div-Hadir">
               </div> <!-- times-div-Hadir -->
             </div> <!-- times-div -->
@@ -231,11 +294,40 @@ return data;
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testLogin(admin@hadir.com, MagangSQA_JC@123)</span>
-                <span class="method-start">2092 ms</span>
+                <span class="method-start">3799 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">2549 ms</span>
+                <span class="method-start">4156 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.juaracoding.tajuaracoding.Login.NegativeLogin</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(https://magang.dikahadir.com/authentication/login, admin@hadir.com, MagangSQA_JC@123)</span>
+                <span class="method-start">5749 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">InvalidEmail</span>
+                <span class="method-start">10004 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">10265 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(https://magang.dikahadir.com/authentication/login, admin@hadir.com, MagangSQA_JC@123)</span>
+                <span class="method-start">11854 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">InvalidPassword</span>
+                <span class="method-start">15372 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">15630 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

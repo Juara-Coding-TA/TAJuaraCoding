@@ -3,15 +3,17 @@ package com.juaracoding.tajuaracoding.utils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 
 public class DriverUtil {
   private static WebDriver driver;
 
   public static WebDriver getDriver() {
     if (driver == null) {
-      ChromeOptions options = new ChromeOptions();
+      FirefoxOptions options = new FirefoxOptions();
       // options.addArguments("--headless");
-      driver = new ChromeDriver(options);
+      driver = new FirefoxDriver(options);
       driver.manage().window().maximize();
     }
     return driver;
@@ -22,7 +24,7 @@ public class DriverUtil {
   }
 
   public static void initializeDriver() {
-    initializeDriver("chrome");
+    initializeDriver("firefox");
   }
 
   public static void initializeDriver(String browserName) {
@@ -36,6 +38,8 @@ public class DriverUtil {
               driver.quit();
           } catch (Exception e) {
               System.out.println("Error closing driver: " + e.getMessage());
+          } finally {
+              driver = null;
           }
       }
   }
