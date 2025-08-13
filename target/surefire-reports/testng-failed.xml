@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Hadir]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="5" name="Inventory Tests(failed)" verbose="0">
+    <parameter name="baseURL" value="https://magang.dikahadir.com/authentication/login"/>
+    <parameter name="password" value="MagangSQA_JC@123"/>
+    <parameter name="username" value="admin@hadir.com"/>
+    <classes>
+      <class name="com.juaracoding.tajuaracoding.Login.NegativeLogin">
+        <methods>
+          <include name="InvalidEmail"/>
+          <include name="teardown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.juaracoding.tajuaracoding.Login.NegativeLogin -->
+    </classes>
+  </test> <!-- Inventory Tests(failed) -->
+</suite> <!-- Failed suite [Hadir] -->
