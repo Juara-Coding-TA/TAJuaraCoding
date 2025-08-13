@@ -1,3 +1,9 @@
+<<<<<<< HEAD
 C:\Users\Administrator\Documents\GitHub\TAJuaraCoding\src\test\java\com\juaracoding\tajuaracoding\BaseTest.java
 C:\Users\Administrator\Documents\GitHub\TAJuaraCoding\src\test\java\com\juaracoding\tajuaracoding\Login\NegativeLogin.java
 C:\Users\Administrator\Documents\GitHub\TAJuaraCoding\src\test\java\com\juaracoding\tajuaracoding\Login\PositiveLogin.java
+=======
+C:\Users\adire\TAJuaraCoding\src\test\java\com\juaracoding\tajuaracoding\BaseTest.java
+C:\Users\adire\TAJuaraCoding\src\test\java\com\juaracoding\tajuaracoding\laporan\IzinTerlambat.java
+C:\Users\adire\TAJuaraCoding\src\test\java\com\juaracoding\tajuaracoding\login\PositiveLogin.java
+>>>>>>> origin/laporan_izinterlambat

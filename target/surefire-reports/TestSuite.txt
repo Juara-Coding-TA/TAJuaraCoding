@@ -1,6 +1,7 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
+<<<<<<< HEAD
 Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 17.56 s <<< FAILURE! -- in TestSuite
 com.juaracoding.tajuaracoding.Login.NegativeLogin.InvalidEmail -- Time elapsed: 0.262 s <<< FAILURE!
 java.lang.AssertionError: expected [Akun tidak ditemukan] but found []
@@ -42,3 +43,6 @@ java.lang.AssertionError: expected [Akun tidak ditemukan] but found []
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
+=======
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.169 s -- in TestSuite
+>>>>>>> origin/laporan_izinterlambat

@@ -2,12 +2,23 @@
 <testng-results ignored="0" total="3" passed="2" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
+<<<<<<< HEAD
   <suite started-at="2025-08-14T00:33:19 WIB" name="Hadir" finished-at="2025-08-14T00:33:37 WIB" duration-ms="17224">
     <groups>
     </groups>
     <test started-at="2025-08-14T00:33:19 WIB" name="Inventory Tests" finished-at="2025-08-14T00:33:37 WIB" duration-ms="17224">
       <class name="com.juaracoding.tajuaracoding.Login.NegativeLogin">
         <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.juaracoding.tajuaracoding.Login.NegativeLogin@479d31f3]" started-at="2025-08-14T00:33:25 WIB" name="setup" finished-at="2025-08-14T00:33:29 WIB" duration-ms="4255" status="PASS">
+=======
+  <suite started-at="2025-08-14T01:56:19 WIB" name="Hadir" finished-at="2025-08-14T01:56:28 WIB" duration-ms="8750">
+    <groups>
+    </groups>
+    <test started-at="2025-08-14T01:56:19 WIB" name="Inventory Tests" finished-at="2025-08-14T01:56:19 WIB" duration-ms="7">
+    </test> <!-- Inventory Tests -->
+    <test started-at="2025-08-14T01:56:19 WIB" name="Authentication Tests" finished-at="2025-08-14T01:56:28 WIB" duration-ms="8708">
+      <class name="com.juaracoding.tajuaracoding.laporan.IzinTerlambat">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.juaracoding.tajuaracoding.laporan.IzinTerlambat@3349e9bb]" started-at="2025-08-14T01:56:19 WIB" name="setup" finished-at="2025-08-14T01:56:21 WIB" duration-ms="2121" status="PASS">
+>>>>>>> origin/laporan_izinterlambat
           <params>
             <param index="0">
               <value>
@@ -28,6 +39,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
+<<<<<<< HEAD
         <test-method signature="InvalidEmail()[pri:0, instance:com.juaracoding.tajuaracoding.Login.NegativeLogin@479d31f3]" started-at="2025-08-14T00:33:29 WIB" name="InvalidEmail" finished-at="2025-08-14T00:33:30 WIB" duration-ms="258" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
@@ -151,10 +163,17 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
           </reporter-output>
         </test-method> <!-- testLogin -->
         <test-method is-config="true" signature="teardown()[pri:0, instance:com.juaracoding.tajuaracoding.Login.PositiveLogin@4ac3c60d]" started-at="2025-08-14T00:33:24 WIB" name="teardown" finished-at="2025-08-14T00:33:25 WIB" duration-ms="1591" status="PASS">
+=======
+        <test-method signature="testVerifikasiHalamanIzinTerlambat()[pri:0, instance:com.juaracoding.tajuaracoding.laporan.IzinTerlambat@3349e9bb]" started-at="2025-08-14T01:56:21 WIB" name="testVerifikasiHalamanIzinTerlambat" finished-at="2025-08-14T01:56:26 WIB" duration-ms="4348" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testVerifikasiHalamanIzinTerlambat -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.juaracoding.tajuaracoding.laporan.IzinTerlambat@3349e9bb]" started-at="2025-08-14T01:56:26 WIB" name="teardown" finished-at="2025-08-14T01:56:28 WIB" duration-ms="2212" status="PASS">
+>>>>>>> origin/laporan_izinterlambat
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- com.juaracoding.tajuaracoding.Login.PositiveLogin -->
-    </test> <!-- Inventory Tests -->
+      </class> <!-- com.juaracoding.tajuaracoding.laporan.IzinTerlambat -->
+    </test> <!-- Authentication Tests -->
   </suite> <!-- Hadir -->
 </testng-results>
