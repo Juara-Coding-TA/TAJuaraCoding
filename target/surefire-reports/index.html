@@ -55,7 +55,7 @@
                 </li>
                 <li>
                   <a href="#" panel-name="testlist-Hadir" class="navigator-link ">
-                    <span class="test-stats">1 test</span>
+                    <span class="test-stats">2 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -103,7 +103,7 @@
                     <div class="method-list-content passed suite-Hadir">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Hadir" title="com.juaracoding.tajuaracoding.Login.PositiveLogin" class="method navigator-link" hash-for-method="testLogin(admin@hadir.com, MagangSQA_JC@123)">testLogin(admin@hadir.com, MagangSQA_JC@123)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Hadir" title="com.juaracoding.tajuaracoding.laporan.IzinTerlambat" class="method navigator-link" hash-for-method="testVerifikasiHalamanIzinTerlambat">testVerifikasiHalamanIzinTerlambat</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Hadir -->
@@ -121,15 +121,14 @@
           <div class="suite-Hadir-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.juaracoding.tajuaracoding.Login.PositiveLogin</span>
+              <span class="class-name">com.juaracoding.tajuaracoding.laporan.IzinTerlambat</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testLogin(admin@hadir.com, MagangSQA_JC@123)">
-                  </a> <!-- testLogin(admin@hadir.com, MagangSQA_JC@123) -->
-                  <span class="method-name">testLogin</span>
-                  <span class="parameters">(admin@hadir.com,MagangSQA_JC@123)</span>
+                  <a name="testVerifikasiHalamanIzinTerlambat">
+                  </a> <!-- testVerifikasiHalamanIzinTerlambat -->
+                  <span class="method-name">testVerifikasiHalamanIzinTerlambat</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -148,10 +147,15 @@
     &lt;parameter name=&quot;baseURL&quot; value=&quot;https://magang.dikahadir.com/authentication/login&quot;/&gt;
     &lt;parameter name=&quot;password&quot; value=&quot;MagangSQA_JC@123&quot;/&gt;
     &lt;parameter name=&quot;username&quot; value=&quot;admin@hadir.com&quot;/&gt;
-    &lt;classes&gt;
-      &lt;class name=&quot;com.juaracoding.tajuaracoding.Login.PositiveLogin&quot;/&gt;
-    &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Inventory Tests --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Authentication Tests&quot; verbose=&quot;0&quot;&gt;
+    &lt;parameter name=&quot;baseURL&quot; value=&quot;https://magang.dikahadir.com/authentication/login&quot;/&gt;
+    &lt;parameter name=&quot;password&quot; value=&quot;MagangSQA_JC@123&quot;/&gt;
+    &lt;parameter name=&quot;username&quot; value=&quot;admin@hadir.com&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.juaracoding.tajuaracoding.laporan.IzinTerlambat&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Authentication Tests --&gt;
 &lt;/suite&gt; &lt;!-- Hadir --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -163,7 +167,10 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Inventory Tests (1 class)</span>
+                <span class="test-name">Inventory Tests (0 classes)</span>
+              </li>
+              <li>
+                <span class="test-name">Authentication Tests (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -191,14 +198,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testLogin')
-data.setCell(0, 2, 'com.juaracoding.tajuaracoding.Login.PositiveLogin')
-data.setCell(0, 3, 454);
+data.setCell(0, 1, 'testVerifikasiHalamanIzinTerlambat')
+data.setCell(0, 2, 'com.juaracoding.tajuaracoding.laporan.IzinTerlambat')
+data.setCell(0, 3, 4348);
 window.suiteTableData['Hadir']= { tableData: data, tableDiv: 'times-div-Hadir'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 454 ms</span>
+              <span class="suite-total-time">Total running time: 4 seconds</span>
               <div id="times-div-Hadir">
               </div> <!-- times-div-Hadir -->
             </div> <!-- times-div -->
@@ -224,18 +231,18 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.juaracoding.tajuaracoding.Login.PositiveLogin</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.juaracoding.tajuaracoding.laporan.IzinTerlambat</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup(https://magang.dikahadir.com/authentication/login, admin@hadir.com, MagangSQA_JC@123)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">testLogin(admin@hadir.com, MagangSQA_JC@123)</span>
-                <span class="method-start">2092 ms</span>
+                <span class="method-name">testVerifikasiHalamanIzinTerlambat</span>
+                <span class="method-start">2121 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">2549 ms</span>
+                <span class="method-start">6471 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

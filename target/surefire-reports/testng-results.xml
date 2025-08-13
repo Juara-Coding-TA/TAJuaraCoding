@@ -2,12 +2,14 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-08-13T22:46:36 WIB" name="Hadir" finished-at="2025-08-13T22:46:41 WIB" duration-ms="4836">
+  <suite started-at="2025-08-14T01:56:19 WIB" name="Hadir" finished-at="2025-08-14T01:56:28 WIB" duration-ms="8750">
     <groups>
     </groups>
-    <test started-at="2025-08-13T22:46:36 WIB" name="Inventory Tests" finished-at="2025-08-13T22:46:41 WIB" duration-ms="4836">
-      <class name="com.juaracoding.tajuaracoding.Login.PositiveLogin">
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.juaracoding.tajuaracoding.Login.PositiveLogin@7f0eb4b4]" started-at="2025-08-13T22:46:36 WIB" name="setup" finished-at="2025-08-13T22:46:38 WIB" duration-ms="2091" status="PASS">
+    <test started-at="2025-08-14T01:56:19 WIB" name="Inventory Tests" finished-at="2025-08-14T01:56:19 WIB" duration-ms="7">
+    </test> <!-- Inventory Tests -->
+    <test started-at="2025-08-14T01:56:19 WIB" name="Authentication Tests" finished-at="2025-08-14T01:56:28 WIB" duration-ms="8708">
+      <class name="com.juaracoding.tajuaracoding.laporan.IzinTerlambat">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.juaracoding.tajuaracoding.laporan.IzinTerlambat@3349e9bb]" started-at="2025-08-14T01:56:19 WIB" name="setup" finished-at="2025-08-14T01:56:21 WIB" duration-ms="2121" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -28,27 +30,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testLogin(java.lang.String,java.lang.String)[pri:0, instance:com.juaracoding.tajuaracoding.Login.PositiveLogin@7f0eb4b4]" started-at="2025-08-13T22:46:38 WIB" name="testLogin" finished-at="2025-08-13T22:46:39 WIB" duration-ms="454" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[admin@hadir.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[MagangSQA_JC@123]]>
-              </value>
-            </param>
-          </params>
+        <test-method signature="testVerifikasiHalamanIzinTerlambat()[pri:0, instance:com.juaracoding.tajuaracoding.laporan.IzinTerlambat@3349e9bb]" started-at="2025-08-14T01:56:21 WIB" name="testVerifikasiHalamanIzinTerlambat" finished-at="2025-08-14T01:56:26 WIB" duration-ms="4348" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testLogin -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.juaracoding.tajuaracoding.Login.PositiveLogin@7f0eb4b4]" started-at="2025-08-13T22:46:39 WIB" name="teardown" finished-at="2025-08-13T22:46:41 WIB" duration-ms="2249" status="PASS">
+        </test-method> <!-- testVerifikasiHalamanIzinTerlambat -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.juaracoding.tajuaracoding.laporan.IzinTerlambat@3349e9bb]" started-at="2025-08-14T01:56:26 WIB" name="teardown" finished-at="2025-08-14T01:56:28 WIB" duration-ms="2212" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- com.juaracoding.tajuaracoding.Login.PositiveLogin -->
-    </test> <!-- Inventory Tests -->
+      </class> <!-- com.juaracoding.tajuaracoding.laporan.IzinTerlambat -->
+    </test> <!-- Authentication Tests -->
   </suite> <!-- Hadir -->
 </testng-results>

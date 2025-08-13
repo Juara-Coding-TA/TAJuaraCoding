@@ -7,8 +7,17 @@
     <parameter name="username" value="admin@hadir.com"/>
     <parameter name="password" value="MagangSQA_JC@123"/>
     <classes>
-      <class name="com.juaracoding.tajuaracoding.Login.PositiveLogin"/>
+      <!-- <class name="com.juaracoding.tajuaracoding.login.PositiveLogin"/> -->
     </classes>
   </test>
+
+  <test name="Authentication Tests">
+    <parameter name="baseURL" value="https://magang.dikahadir.com/authentication/login"/>
+    <parameter name="username" value="admin@hadir.com"/>
+    <parameter name="password" value="MagangSQA_JC@123"/>
+    <classes>
+    <class name="com.juaracoding.tajuaracoding.laporan.IzinTerlambat"/>
+  </classes>
+</test>
 
 </suite>
