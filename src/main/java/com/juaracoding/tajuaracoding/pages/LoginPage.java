@@ -9,6 +9,8 @@ public class LoginPage {
     public By emailField = By.id("email");
     public By passwordField = By.id("password");
     public By loginButton = By.xpath("//*[@id=\"__next\"]/div/div/div[2]/div/div[2]/form/button");
+    public By logoutButton = By.xpath("//*[@id=\"profile-menu\"]/div[3]/ul/div/button[2]");
+    public By miniButton = By.xpath("//*[@id=\"__next\"]/div/header/div/button[3]");
     public By errorMessageAccountNotFound = By.xpath("//*[@id=\"__next\"]/div/div/div[2]/div/div[1]/div/div/div/div[2]/p");
     public By errorMessageEmailorPassword = By.xpath("//*[@id=\"__next\"]/div/div/div[2]/div/div[1]/div/div/div/div[2]/p");
 
@@ -31,6 +33,14 @@ public class LoginPage {
 
     public void clickButton() {
         driver.findElement(loginButton).click();
+    }
+
+    public void miniButton(){
+        driver.findElement(miniButton).click();
+    }
+
+    public void logoutButton(){
+        driver.findElement(logoutButton).click();
     }
 
     public String getCurrentUrl() {
