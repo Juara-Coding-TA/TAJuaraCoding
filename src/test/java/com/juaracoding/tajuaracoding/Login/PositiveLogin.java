@@ -10,7 +10,7 @@ import com.juaracoding.tajuaracoding.utils.DriverUtil;
 
 public class PositiveLogin extends BaseTest{
 
-    @Test(priority = 1)
+    @Test
     @Parameters({"username", "password"})
     public void testLogin(String username, String password) throws InterruptedException {
         // Initialize the LoginPage with the current driver

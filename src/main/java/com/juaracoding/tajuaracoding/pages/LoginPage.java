@@ -6,9 +6,9 @@ import org.openqa.selenium.WebDriver;
 public class LoginPage {
     private WebDriver driver;
 
-    private By emailField = By.id("email");
-    private By passwordField = By.id("password");
-    private By loginButton = By.xpath("//*[@id=\"__next\"]/div/div/div[2]/div/div[2]/form/button");
+    public By emailField = By.id("email");
+    public By passwordField = By.id("password");
+    public By loginButton = By.xpath("//*[@id=\"__next\"]/div/div/div[2]/div/div[2]/form/button");
     public By errorMessageAccountNotFound = By.xpath("//*[@id=\"__next\"]/div/div/div[2]/div/div[1]/div/div/div/div[2]/p");
     public By errorMessageEmailorPassword = By.xpath("//*[@id=\"__next\"]/div/div/div[2]/div/div[1]/div/div/div/div[2]/p");
 
