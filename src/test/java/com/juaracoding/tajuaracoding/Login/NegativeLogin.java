@@ -3,7 +3,6 @@ package com.juaracoding.tajuaracoding.Login;
 import com.juaracoding.tajuaracoding.BaseTest;
 import com.juaracoding.tajuaracoding.pages.LoginPage;
 import com.juaracoding.tajuaracoding.utils.DriverUtil;
-import jdk.internal.org.jline.utils.Timeout;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.TimeoutException;
