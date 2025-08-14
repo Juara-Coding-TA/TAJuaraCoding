@@ -9,8 +9,8 @@ public class LoginPage {
     private By emailField = By.id("email");
     private By passwordField = By.id("password");
     private By loginButton = By.xpath("//*[@id=\"__next\"]/div/div/div[2]/div/div[2]/form/button");
-    private By errorMessageAccountNotFound = By.xpath("//*[@id=\"__next\"]/div/div/div[2]/div/div[1]/div/div/div/div[2]/p");
-    private By errorMessageEmailorPassword = By.xpath("//*[@id=\"__next\"]/div/div/div[2]/div/div[1]/div/div/div/div[2]/p");
+    public By errorMessageAccountNotFound = By.xpath("//*[@id=\"__next\"]/div/div/div[2]/div/div[1]/div/div/div/div[2]/p");
+    public By errorMessageEmailorPassword = By.xpath("//*[@id=\"__next\"]/div/div/div[2]/div/div[1]/div/div/div/div[2]/p");
 
     public LoginPage(WebDriver driver) {
         this.driver = driver;

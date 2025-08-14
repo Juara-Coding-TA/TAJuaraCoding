@@ -21,7 +21,7 @@ public class PositiveLogin extends BaseTest{
         
         // Perform login
         loginPage.login(username, password);
-        Thread.sleep(100);
+        Thread.sleep(1000);
         // Verify successful login by checking the URL or any other element that indicates success
         String currentUrl = loginPage.getCurrentUrl();
         System.out.println("Current URL after login: " + currentUrl);
