@@ -13,7 +13,7 @@ import com.juaracoding.tajuaracoding.utils.DriverUtil;
 
 public class PositiveLogin extends BaseTest {
 
-    @Test
+    @Test()
     public void testLogin() throws InterruptedException {
         LoginPage loginPage = new LoginPage(DriverUtil.getDriver());
 

@@ -19,6 +19,15 @@
     <classes>
     <class name="com.juaracoding.tajuaracoding.laporan.IzinTerlambat"/>
   </classes>
-</test>
+  </test>
+
+  <test name="Dashboard Tests">
+  <parameter name="baseURL" value="https://magang.dikahadir.com/authentication/login"/>
+  <parameter name="username" value="admin@hadir.com"/>
+  <parameter name="password" value="MagangSQA_JC@123"/>
+  <classes>
+    <class name="com.juaracoding.tajuaracoding.Dashboard.DashboardTest"/>
+  </classes>
+  </test>
 
 </suite>

@@ -12,7 +12,7 @@ public class IzinTerlambat extends BaseTest {
 
     private IzinTerlambatPage izinTerlambatPage;
 
-    @Test
+    @Test()
     public void testVerifikasiHalamanIzinTerlambat() throws InterruptedException {
         Navbar navbar = new Navbar(DriverUtil.getDriver());
         navbar.openMenuLaporan();

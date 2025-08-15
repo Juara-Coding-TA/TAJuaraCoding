@@ -15,6 +15,8 @@ public class Navbar {
     private By subMenuIzinTerlambat = By.xpath("//p[normalize-space()='Izin Terlambat']");
     private By subMenuIzinPulangCepat = By.xpath("//div[p[normalize-space(text())='Izin Pulang Cepat']]");
     private By subMenuCuti = By.xpath("//div[@class='MuiBox-root css-zb4pxb']//p[normalize-space(.)='Cuti']");
+    private By subMenuDashboard = By.xpath("//*[@id=\"__next\"]/div/div[1]/div[2]/div/div/div[1]/div[2]/div/div/div/div/div/div[2]/div[1]/div/div[2]/div/div/div/div[1]/div[2]/p");
+
 
     public Navbar(WebDriver driver) {
         this.driver = driver;
@@ -38,6 +40,12 @@ public class Navbar {
 
     public void clickCuti() {
         driver.findElement(subMenuCuti).click();
+    }
+
+    public void clickDashboard(){
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebElement dashoard = wait.until(ExpectedConditions.elementToBeClickable(subMenuDashboard));
+        dashoard.click();
     }
 
 }
