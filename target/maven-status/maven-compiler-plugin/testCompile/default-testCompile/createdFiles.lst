@@ -1,4 +1,5 @@
+com\juaracoding\tajuaracoding\Dashboard\DashboardTest.class
+com\juaracoding\tajuaracoding\laporan\IzinTerlambatTest.class
 com\juaracoding\tajuaracoding\BaseTest.class
-com\juaracoding\tajuaracoding\login\NegativeLogin.class
-com\juaracoding\tajuaracoding\laporan\IzinTerlambat.class
-com\juaracoding\tajuaracoding\login\PositiveLogin.class
+com\juaracoding\tajuaracoding\login\PositiveLoginTest.class
+com\juaracoding\tajuaracoding\login\NegativeLoginTest.class

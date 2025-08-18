@@ -1,13 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="1" total="11" passed="8" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-08-14T03:11:35 WIB" name="Hadir" finished-at="2025-08-14T03:11:43 WIB" duration-ms="7410">
+  <suite started-at="2025-08-19T03:39:17 WIB" name="Hadir" finished-at="2025-08-19T03:40:39 WIB" duration-ms="82607">
     <groups>
     </groups>
-    <test started-at="2025-08-14T03:11:35 WIB" name="Login Tests" finished-at="2025-08-14T03:11:43 WIB" duration-ms="7387">
-      <class name="com.juaracoding.tajuaracoding.login.PositiveLogin">
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.juaracoding.tajuaracoding.login.PositiveLogin@7f0eb4b4]" started-at="2025-08-14T03:11:35 WIB" name="setup" finished-at="2025-08-14T03:11:40 WIB" duration-ms="4717" status="PASS">
+    <test started-at="2025-08-19T03:39:17 WIB" name="Login Tests" finished-at="2025-08-19T03:39:29 WIB" duration-ms="12561">
+      <class name="com.juaracoding.tajuaracoding.login.NegativeLoginTest">
+        <test-method signature="InvalidEmail()[pri:0, instance:com.juaracoding.tajuaracoding.login.NegativeLoginTest@76505305]" started-at="2025-08-19T03:39:24 WIB" name="InvalidEmail" finished-at="2025-08-19T03:39:28 WIB" duration-ms="4686" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- InvalidEmail -->
+        <test-method signature="InvalidPassword()[pri:0, instance:com.juaracoding.tajuaracoding.login.NegativeLoginTest@76505305]" started-at="2025-08-19T03:39:28 WIB" name="InvalidPassword" finished-at="2025-08-19T03:39:29 WIB" duration-ms="932" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- InvalidPassword -->
+      </class> <!-- com.juaracoding.tajuaracoding.login.NegativeLoginTest -->
+      <class name="com.juaracoding.tajuaracoding.login.PositiveLoginTest">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.juaracoding.tajuaracoding.login.PositiveLoginTest@c8c12ac]" started-at="2025-08-19T03:39:17 WIB" name="setup" finished-at="2025-08-19T03:39:21 WIB" duration-ms="4300" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -28,17 +38,340 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testLogin()[pri:0, instance:com.juaracoding.tajuaracoding.login.PositiveLogin@7f0eb4b4]" started-at="2025-08-14T03:11:40 WIB" name="testLogin" finished-at="2025-08-14T03:11:41 WIB" duration-ms="752" status="PASS">
+        <test-method signature="testLogin()[pri:0, instance:com.juaracoding.tajuaracoding.login.PositiveLoginTest@c8c12ac]" started-at="2025-08-19T03:39:21 WIB" name="testLogin" finished-at="2025-08-19T03:39:22 WIB" duration-ms="753" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLogin -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.juaracoding.tajuaracoding.login.PositiveLogin@7f0eb4b4]" started-at="2025-08-14T03:11:41 WIB" name="teardown" finished-at="2025-08-14T03:11:43 WIB" duration-ms="1882" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.juaracoding.tajuaracoding.login.PositiveLoginTest@c8c12ac]" started-at="2025-08-19T03:39:22 WIB" name="teardown" finished-at="2025-08-19T03:39:24 WIB" duration-ms="1840" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- com.juaracoding.tajuaracoding.login.PositiveLogin -->
+      </class> <!-- com.juaracoding.tajuaracoding.login.PositiveLoginTest -->
     </test> <!-- Login Tests -->
-    <test started-at="2025-08-14T03:11:43 WIB" name="Authentication Tests" finished-at="2025-08-14T03:11:43 WIB" duration-ms="0">
-    </test> <!-- Authentication Tests -->
+    <test started-at="2025-08-19T03:39:29 WIB" name="Laporan Tests" finished-at="2025-08-19T03:40:31 WIB" duration-ms="62016">
+      <class name="com.juaracoding.tajuaracoding.laporan.IzinTerlambatTest">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.juaracoding.tajuaracoding.laporan.IzinTerlambatTest@2f4948e4]" started-at="2025-08-19T03:39:29 WIB" name="setup" finished-at="2025-08-19T03:39:30 WIB" duration-ms="370" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://magang.dikahadir.com/authentication/login]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin@hadir.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[MagangSQA_JC@123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="negativeTestFilterByUnit()[pri:0, instance:com.juaracoding.tajuaracoding.laporan.IzinTerlambatTest@2f4948e4]" started-at="2025-08-19T03:39:30 WIB" name="negativeTestFilterByUnit" finished-at="2025-08-19T03:39:34 WIB" duration-ms="4185" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Seharusnya tabel kosong ketika unit tidak ditemukan expected [0] but found [11]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Seharusnya tabel kosong ketika unit tidak ditemukan expected [0] but found [11]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:1431)
+at org.testng.Assert.assertEquals(Assert.java:1395)
+at com.juaracoding.tajuaracoding.laporan.IzinTerlambatTest.negativeTestFilterByUnit(IzinTerlambatTest.java:144)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- negativeTestFilterByUnit -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.juaracoding.tajuaracoding.laporan.IzinTerlambatTest@2f4948e4]" started-at="2025-08-19T03:39:34 WIB" name="teardown" finished-at="2025-08-19T03:39:36 WIB" duration-ms="1831" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.juaracoding.tajuaracoding.laporan.IzinTerlambatTest@2f4948e4]" started-at="2025-08-19T03:39:36 WIB" name="setup" finished-at="2025-08-19T03:39:39 WIB" duration-ms="3399" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://magang.dikahadir.com/authentication/login]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin@hadir.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[MagangSQA_JC@123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="positiveTestFilterByUnit()[pri:0, instance:com.juaracoding.tajuaracoding.laporan.IzinTerlambatTest@2f4948e4]" started-at="2025-08-19T03:39:39 WIB" name="positiveTestFilterByUnit" finished-at="2025-08-19T03:39:43 WIB" duration-ms="4373" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- positiveTestFilterByUnit -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.juaracoding.tajuaracoding.laporan.IzinTerlambatTest@2f4948e4]" started-at="2025-08-19T03:39:43 WIB" name="teardown" finished-at="2025-08-19T03:39:45 WIB" duration-ms="1763" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.juaracoding.tajuaracoding.laporan.IzinTerlambatTest@2f4948e4]" started-at="2025-08-19T03:39:45 WIB" name="setup" finished-at="2025-08-19T03:39:48 WIB" duration-ms="3410" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://magang.dikahadir.com/authentication/login]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin@hadir.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[MagangSQA_JC@123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testDateRangeFilter()[pri:0, instance:com.juaracoding.tajuaracoding.laporan.IzinTerlambatTest@2f4948e4]" started-at="2025-08-19T03:39:48 WIB" name="testDateRangeFilter" finished-at="2025-08-19T03:39:55 WIB" duration-ms="6361" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDateRangeFilter -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.juaracoding.tajuaracoding.laporan.IzinTerlambatTest@2f4948e4]" started-at="2025-08-19T03:39:55 WIB" name="teardown" finished-at="2025-08-19T03:39:57 WIB" duration-ms="1811" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.juaracoding.tajuaracoding.laporan.IzinTerlambatTest@2f4948e4]" started-at="2025-08-19T03:39:57 WIB" name="setup" finished-at="2025-08-19T03:40:00 WIB" duration-ms="3592" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://magang.dikahadir.com/authentication/login]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin@hadir.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[MagangSQA_JC@123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testPenca()[pri:0, instance:com.juaracoding.tajuaracoding.laporan.IzinTerlambatTest@2f4948e4]" started-at="2025-08-19T03:40:00 WIB" name="testPenca" finished-at="2025-08-19T03:40:06 WIB" duration-ms="5419" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[Unable to locate element: //input[@id='job_departement']
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [366a6955-cc21-4a20-b47e-67cbc7100132, findElement {using=xpath, value=//input[@id='job_departement']}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 141.0.3, moz:accessibilityChecks: false, moz:buildID: 20250806102122, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 9276, moz:profile: C:\Users\adire\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 366a6955-cc21-4a20-b47e-67cbc7100132]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: //input[@id='job_departement']
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [366a6955-cc21-4a20-b47e-67cbc7100132, findElement {using=xpath, value=//input[@id='job_departement']}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 141.0.3, moz:accessibilityChecks: false, moz:buildID: 20250806102122, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 9276, moz:profile: C:\Users\adire\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 366a6955-cc21-4a20-b47e-67cbc7100132
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+at com.juaracoding.tajuaracoding.laporan.IzinTerlambatTest.testPenca(IzinTerlambatTest.java:40)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPenca -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.juaracoding.tajuaracoding.laporan.IzinTerlambatTest@2f4948e4]" started-at="2025-08-19T03:40:06 WIB" name="teardown" finished-at="2025-08-19T03:40:07 WIB" duration-ms="1819" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.juaracoding.tajuaracoding.laporan.IzinTerlambatTest@2f4948e4]" started-at="2025-08-19T03:40:07 WIB" name="setup" finished-at="2025-08-19T03:40:11 WIB" duration-ms="3922" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://magang.dikahadir.com/authentication/login]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin@hadir.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[MagangSQA_JC@123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testPencarianUserTidakAda()[pri:0, instance:com.juaracoding.tajuaracoding.laporan.IzinTerlambatTest@2f4948e4]" started-at="2025-08-19T03:40:11 WIB" name="testPencarianUserTidakAda" finished-at="2025-08-19T03:40:17 WIB" duration-ms="6028" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPencarianUserTidakAda -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.juaracoding.tajuaracoding.laporan.IzinTerlambatTest@2f4948e4]" started-at="2025-08-19T03:40:17 WIB" name="teardown" finished-at="2025-08-19T03:40:19 WIB" duration-ms="1812" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.juaracoding.tajuaracoding.laporan.IzinTerlambatTest@2f4948e4]" started-at="2025-08-19T03:40:19 WIB" name="setup" finished-at="2025-08-19T03:40:23 WIB" duration-ms="3980" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://magang.dikahadir.com/authentication/login]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin@hadir.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[MagangSQA_JC@123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testPencarianUserValid()[pri:0, instance:com.juaracoding.tajuaracoding.laporan.IzinTerlambatTest@2f4948e4]" started-at="2025-08-19T03:40:23 WIB" name="testPencarianUserValid" finished-at="2025-08-19T03:40:29 WIB" duration-ms="5996" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPencarianUserValid -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.juaracoding.tajuaracoding.laporan.IzinTerlambatTest@2f4948e4]" started-at="2025-08-19T03:40:29 WIB" name="teardown" finished-at="2025-08-19T03:40:31 WIB" duration-ms="1932" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.juaracoding.tajuaracoding.laporan.IzinTerlambatTest -->
+    </test> <!-- Laporan Tests -->
+    <test started-at="2025-08-19T03:40:31 WIB" name="Dashboard Tests" finished-at="2025-08-19T03:40:39 WIB" duration-ms="7994">
+      <class name="com.juaracoding.tajuaracoding.Dashboard.DashboardTest">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.juaracoding.tajuaracoding.Dashboard.DashboardTest@5aa9e4eb]" started-at="2025-08-19T03:40:31 WIB" name="setup" finished-at="2025-08-19T03:40:35 WIB" duration-ms="3455" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://magang.dikahadir.com/authentication/login]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin@hadir.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[MagangSQA_JC@123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="VerificationDashboardTest()[pri:0, instance:com.juaracoding.tajuaracoding.Dashboard.DashboardTest@5aa9e4eb]" started-at="2025-08-19T03:40:35 WIB" name="VerificationDashboardTest" finished-at="2025-08-19T03:40:37 WIB" duration-ms="2729" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerificationDashboardTest -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.juaracoding.tajuaracoding.Dashboard.DashboardTest@5aa9e4eb]" started-at="2025-08-19T03:40:37 WIB" name="teardown" finished-at="2025-08-19T03:40:39 WIB" duration-ms="1808" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.juaracoding.tajuaracoding.Dashboard.DashboardTest -->
+    </test> <!-- Dashboard Tests -->
   </suite> <!-- Hadir -->
 </testng-results>

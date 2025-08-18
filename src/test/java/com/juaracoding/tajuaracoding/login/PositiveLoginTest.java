@@ -11,7 +11,7 @@ import com.juaracoding.tajuaracoding.BaseTest;
 import com.juaracoding.tajuaracoding.pages.LoginPage;
 import com.juaracoding.tajuaracoding.utils.DriverUtil;
 
-public class PositiveLogin extends BaseTest {
+public class PositiveLoginTest extends BaseTest {
 
     @Test()
     public void testLogin() throws InterruptedException {

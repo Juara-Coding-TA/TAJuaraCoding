@@ -5,7 +5,7 @@ import com.juaracoding.tajuaracoding.utils.DriverUtil;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class NegativeLogin {
+public class NegativeLoginTest {
 
     @Test
         public void InvalidEmail() {

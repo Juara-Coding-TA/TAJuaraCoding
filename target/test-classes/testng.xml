@@ -2,23 +2,27 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Hadir">
 
+  <parameter name="baseURL" value="https://magang.dikahadir.com/authentication/login"/>
+  <parameter name="username" value="admin@hadir.com"/>
+  <parameter name="password" value="MagangSQA_JC@123"/>
+
   <test name="Login Tests">
-    <parameter name="baseURL" value="https://magang.dikahadir.com/authentication/login"/>
-    <parameter name="username" value="admin@hadir.com"/>
-    <parameter name="password" value="MagangSQA_JC@123"/>
     <classes>
-      <class name="com.juaracoding.tajuaracoding.login.PositiveLogin"/>
-      <class name="com.juaracoding.tajuaracoding.login.NegativeLogin"/>
+      <class name="com.juaracoding.tajuaracoding.login.PositiveLoginTest"/>
+      <class name="com.juaracoding.tajuaracoding.login.NegativeLoginTest"/>
     </classes>
   </test>
 
-  <test name="Authentication Tests">
-    <parameter name="baseURL" value="https://magang.dikahadir.com/authentication/login"/>
-    <parameter name="username" value="admin@hadir.com"/>
-    <parameter name="password" value="MagangSQA_JC@123"/>
+  <test name="Laporan Tests">
     <classes>
-    <class name="com.juaracoding.tajuaracoding.laporan.IzinTerlambat"/>
+    <class name="com.juaracoding.tajuaracoding.laporan.IzinTerlambatTest"/>
   </classes>
-</test>
+  </test>
+
+  <test name="Dashboard Tests">
+  <classes>
+    <class name="com.juaracoding.tajuaracoding.Dashboard.DashboardTest"/>
+  </classes>
+  </test>
 
 </suite>
