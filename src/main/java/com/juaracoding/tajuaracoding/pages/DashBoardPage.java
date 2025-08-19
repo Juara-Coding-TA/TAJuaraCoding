@@ -1,6 +1,7 @@
 package com.juaracoding.tajuaracoding.pages;
 
 import com.juaracoding.tajuaracoding.utils.DriverUtil;
+import org.apache.poi.hssf.record.PageBreakRecord;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -11,6 +12,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -34,7 +36,7 @@ public class DashBoardPage {
     private By endDateInput = By.xpath("(//input[@placeholder='End Date'])[1]");
     private By saveButton = By.xpath("(//button[normalize-space()='save'])[1]");
     private By cancelButtonCalendar = By.xpath("(//button[normalize-space()='cancel'])[1]");
-    private By dataRows = By.xpath("//table/tbody/tr");
+    private By dataRows = By.xpath("//tbody/tr");
 
     // Month/Year navigation Calendar
 
@@ -128,4 +130,73 @@ public class DashBoardPage {
         DriverUtil.getDriver().findElement(searchButton).click();
     }
 
+    public void clickuplinerlembur(String upliner){
+
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        String xpath = String.format("//p[normalize-space()='Lembur']/following::table[@aria-label='simple table'][1]//a[h6[contains(text(),'%s')]]", upliner);
+        WebElement link = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(xpath)));
+        link.click();
+    }
+
+    public void clickuplinercuti(String upliner){
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        String xpath = String.format("//p[normalize-space()='Cuti']/following::table[@aria-label='simple table'][1]//a[h6[contains(text(),'%s')]]", upliner);
+        WebElement link = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(xpath)));
+        link.click();
+    }
+
+    public boolean getDataCutiList(String upliner) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(dataRows));
+        List<WebElement> rows = driver.findElements(dataRows);
+
+        for (WebElement row : rows){
+            String rowText = row.getText().trim();
+            if(rowText.toLowerCase().contains(upliner.toLowerCase().trim())){
+                return true;
+                }
+            }
+        return false;
+    }
+
+    public boolean getDataLemburList(String upliner) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(dataRows));
+        List<WebElement> rows = driver.findElements(dataRows);
+
+        for (WebElement row : rows){
+            String rowText = row.getText().trim();
+            if(rowText.toLowerCase().contains(upliner.toLowerCase().trim())){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public void clickuplinerkoreksi(String upliner){
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        String xpath = String.format("//p[normalize-space()='Koreksi']/following::table[@aria-label='simple table'][1]//a[h6[contains(text(),'%s')]]", upliner);
+        WebElement link = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(xpath)));
+        link.click();
+    }
+
+    public boolean getDataKoreksiList(String upliner) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(dataRows));
+        List<WebElement> rows = driver.findElements(dataRows);
+
+        for (WebElement row : rows){
+            String rowText = row.getText().trim();
+            if(rowText.toLowerCase().contains(upliner.toLowerCase().trim())){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public Collection<String> getDataRows() {
+        return DriverUtil.getDriver().findElements(dataRows).stream()
+                .map(WebElement::getText)
+                .collect(Collectors.toList());
+    }
 }

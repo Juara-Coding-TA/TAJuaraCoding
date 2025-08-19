@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 public class PendingDashboardTest extends BaseTest {
     DashBoardPage dashBoardPage;
 
-    @Test(enabled = true)
+    @Test
     public void testVerifyPage() throws InterruptedException {
         dashBoardPage = new DashBoardPage(DriverUtil.getDriver());
         Thread.sleep(2000);
@@ -19,7 +19,7 @@ public class PendingDashboardTest extends BaseTest {
         Assert.assertTrue(DriverUtil.getDriver().findElement(dashBoardPage.filterByUnitButton).isDisplayed(),"Icon filter merah tidak ditemukan!");
     }
 
-    @Test()
+    @Test
     public void DateRangeFilter() throws InterruptedException {
         dashBoardPage = new DashBoardPage(DriverUtil.getDriver());
         Thread.sleep(2000);
@@ -112,8 +112,55 @@ public class PendingDashboardTest extends BaseTest {
     }
 
     @Test
-    public void positivefilterTest(){
-
+    public void validator1Lembur() throws InterruptedException {
+        dashBoardPage = new DashBoardPage(DriverUtil.getDriver());
+        Thread.sleep(2000);
+        if (dashBoardPage.validator1Lembur.isEmpty()) {
+            System.out.println("Validator1 - Lembur kosong.");
+            Assert.assertEquals(dashBoardPage.validator1Lembur.size(), 0);
+        } else {
+            System.out.println("Validator1 - Lembur ada data.");
+            Assert.assertTrue(dashBoardPage.validator1Lembur.size() > 0);
+            dashBoardPage.clickuplinerlembur("Hadir SQA Testing 2");
+            Assert.assertTrue(dashBoardPage.getCurrentUrl().contains("v1-lembur"),"URL halaman tidak sesuai!");
+            System.out.println(dashBoardPage.getCurrentUrl());
+            Assert.assertTrue(dashBoardPage.getDataLemburList("Hadir SQA Testing 2"),"Data tidak muncul");
+        }
     }
+
+    @Test
+    public void validator1cuti() throws InterruptedException {
+        dashBoardPage = new DashBoardPage(DriverUtil.getDriver());
+        Thread.sleep(2000);
+        if (dashBoardPage.validator1Cuti.isEmpty()) {
+            System.out.println("Validator1 - Cuti kosong.");
+            Assert.assertEquals(dashBoardPage.validator1Cuti.size(), 0);
+        } else {
+            System.out.println("Validator1 - Cuti ada data.");
+            Assert.assertTrue(dashBoardPage.validator1Cuti.size() > 0);
+            dashBoardPage.clickuplinercuti("Hadir SQA Testing 2");
+            Assert.assertTrue(dashBoardPage.getCurrentUrl().contains("v1-cuti"),"URL halaman tidak sesuai!");
+            System.out.println(dashBoardPage.getCurrentUrl());
+            Assert.assertTrue(dashBoardPage.getDataCutiList("Hadir SQA Testing 2"),"Data tidak muncul");
+        }
+    }
+
+    @Test
+    public void validator1koreksi() throws InterruptedException {
+        dashBoardPage = new DashBoardPage(DriverUtil.getDriver());
+        Thread.sleep(2000);
+        if (dashBoardPage.validator1Koreksi.isEmpty()) {
+            System.out.println("Validator1 - Koreksi kosong.");
+            Assert.assertEquals(dashBoardPage.validator1Koreksi.size(), 0);
+        } else {
+            System.out.println("Validator1 - Koreksi ada data.");
+            Assert.assertTrue(dashBoardPage.validator1Koreksi.size() > 0);
+            dashBoardPage.clickuplinerkoreksi("Hadir SQA Testing 2");
+            Assert.assertTrue(dashBoardPage.getCurrentUrl().contains("v1-koreksi"),"URL halaman tidak sesuai!");
+            System.out.println(dashBoardPage.getCurrentUrl());
+            Assert.assertTrue(dashBoardPage.getDataKoreksiList("Hadir SQA Testing 2"),"Data tidak muncul");
+        }
+    }
+
 
 }
