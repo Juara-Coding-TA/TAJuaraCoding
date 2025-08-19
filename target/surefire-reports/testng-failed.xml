@@ -8,8 +8,8 @@
     <classes>
       <class name="com.juaracoding.tajuaracoding.laporan.IzinTerlambatTest">
         <methods>
-          <include name="testPenca"/>
           <include name="negativeTestFilterByUnit"/>
+          <include name="resetTestAllFilter"/>
           <include name="teardown"/>
           <include name="setup"/>
         </methods>
