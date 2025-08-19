@@ -17,11 +17,16 @@ public class IzinTerlambatPage {
     private WebDriverWait wait; 
 
     // Locators
-    public By lastPageButton = By.xpath("//button[@title='Go to last page']");
     public By searchField = By.id("search");
     public By searchButton = By.xpath("//button[.//*[@data-testid='SearchIcon']]");
     public By resetButton = By.xpath("//button[normalize-space()='Reset']");
     public By table = By.xpath("(//div[@class='MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true MuiGrid-grid-lg-12 css-1a249as'])[2]");
+    public By statusCells = By.xpath("//div[@role='row']//span[contains(text(),'PENDING') or contains(text(),'APPROVED') or contains(text(),'REJECT')]");
+    public By filterByModal = By.xpath("/html/body/div[3]/div[3]/div");
+    public By nextPageButton = By.xpath("//button[@title='Go to next page']//*[name()='svg']");
+    public By previousPageButton = By.xpath("//button[@title='Go to previous page']//*[name()='svg']");
+    public By firstPageButton = By.xpath("//button[@title='Go to first page']");
+    public By lastPageButton = By.xpath("//button[@title='Go to last page']");
 
     // Locator
     private By calendarIcon = By.xpath("//button//*[local-name()='svg' and contains(@class,'feather-calendar')]");
@@ -41,8 +46,8 @@ public class IzinTerlambatPage {
     // Icon Red Filter
     public By filterByUnitButton = By.xpath("//button[contains(@class, 'MuiButton-containedSecondary') and contains(@class, 'MuiButton-sizeMedium')]");
     public By filterByUnitSelect = By.xpath("//input[@id='job_departement']");
-    public By applyButton = By.xpath("(//button[normalize-space()='Terapkan'])[1]");
-    public By cancelButton = By.xpath("(//button[normalize-space()='Batal'])[1]");
+    public By applyButton = By.xpath("//button[normalize-space()='Terapkan']");
+    public By cancelButton = By.xpath("//button[normalize-space()='Batal']");
     public By dataNotFoundMessage = By.xpath("//p[contains(text(), 'Data tidak ditemukan')]");
 
     public IzinTerlambatPage(WebDriver driver) {
@@ -70,6 +75,29 @@ public class IzinTerlambatPage {
             By.xpath("//table//tbody//tr//td[" + statusColIndex + "]//*[self::span or self::div]"))
             .stream().map(element -> element.getText().trim().split("\\s+")[0])
             .collect(Collectors.toList());
+        }
+
+        public List<String> getStatusListAlt() {
+            List<WebElement> headers = DriverUtil.getDriver().findElements(By.xpath("//table//thead//th"));
+            int statusColIndex = -1;
+
+            for (int i = 0; i < headers.size(); i++) {
+                if (headers.get(i).getText().trim().equalsIgnoreCase("STATUS")) {
+                    statusColIndex = i + 1;
+                    break;
+                }
+            }
+
+            if (statusColIndex == -1) {
+                throw new RuntimeException("Kolom STATUS tidak ditemukan!");
+            }
+
+            return DriverUtil.getDriver().findElements(
+                By.xpath("//table//tbody//tr//td[" + statusColIndex + "]//*[self::span or self::div]"))
+                .stream()
+                .map(element -> element.getText().trim().split("\\s+")[0])
+                .filter(text -> text.equals("PENDING") || text.equals("APPROVED") || text.equals("REJECT"))
+                .collect(Collectors.toList());
         }
 
         public List<String> getUserNameList() {
@@ -118,6 +146,11 @@ public class IzinTerlambatPage {
             driver.findElement(searchButton).click();
         }
 
+        public String getSearchResult() {
+            WebElement fieldSearch = DriverUtil.getDriver().findElement(searchField);
+            return fieldSearch.getAttribute("value"); 
+        }
+
         public void searchButton() {
             driver.findElement(searchButton).click();
         }
@@ -164,6 +197,12 @@ public class IzinTerlambatPage {
             return DriverUtil.getDriver().findElement(endDateInput).getAttribute("value");
         }
 
+        public String getMonthText() {
+            WebElement dropdown = DriverUtil.getDriver().findElement(monthDropdown);
+            Select select = new Select(dropdown);
+            return select.getFirstSelectedOption().getText();
+        }
+
         public void clickSaveCalendar() {
             DriverUtil.getDriver().findElement(saveButton).click();
         }
@@ -194,6 +233,10 @@ public class IzinTerlambatPage {
             WebElement dropdown = driver.findElement(monthDropdown);
             Select select = new Select(dropdown);
             select.selectByVisibleText(month); 
-}
+        }
+
+        public void nextPage() {
+            DriverUtil.getDriver().findElement(nextPageButton).click();
+        }
        
 }

@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">10 methods, 2 failed,   8 passed</span>
+                    <span class="method-stats">9 methods, 2 failed,   7 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -108,7 +108,7 @@
                       <br/>
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Hadir" title="com.juaracoding.tajuaracoding.laporan.IzinTerlambatTest" class="method navigator-link" hash-for-method="testPenca">testPenca</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Hadir" title="com.juaracoding.tajuaracoding.laporan.IzinTerlambatTest" class="method navigator-link" hash-for-method="resetTestAllFilter">resetTestAllFilter</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Hadir -->
@@ -122,32 +122,22 @@
                     <div class="method-list-content passed suite-Hadir">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Hadir" title="com.juaracoding.tajuaracoding.login.NegativeLoginTest" class="method navigator-link" hash-for-method="InvalidEmail">InvalidEmail</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Hadir" title="com.juaracoding.tajuaracoding.login.NegativeLoginTest" class="method navigator-link" hash-for-method="InvalidPassword">InvalidPassword</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Hadir" title="com.juaracoding.tajuaracoding.Dashboard.DashboardTest" class="method navigator-link" hash-for-method="VerificationDashboardTest">VerificationDashboardTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Hadir" title="com.juaracoding.tajuaracoding.laporan.IzinTerlambatTest" class="method navigator-link" hash-for-method="positiveTestFilterByUnit">positiveTestFilterByUnit</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Hadir" title="com.juaracoding.tajuaracoding.laporan.IzinTerlambatTest" class="method navigator-link" hash-for-method="testDateRangeFilter">testDateRangeFilter</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Hadir" title="com.juaracoding.tajuaracoding.laporan.IzinTerlambatTest" class="method navigator-link" hash-for-method="testCheckSpecificStatuses">testCheckSpecificStatuses</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Hadir" title="com.juaracoding.tajuaracoding.login.PositiveLoginTest" class="method navigator-link" hash-for-method="testLogin">testLogin</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Hadir" title="com.juaracoding.tajuaracoding.laporan.IzinTerlambatTest" class="method navigator-link" hash-for-method="testCombinationFilterNameDateUnit">testCombinationFilterNameDateUnit</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Hadir" title="com.juaracoding.tajuaracoding.laporan.IzinTerlambatTest" class="method navigator-link" hash-for-method="testDateRangeFilter">testDateRangeFilter</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -158,6 +148,11 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Hadir" title="com.juaracoding.tajuaracoding.laporan.IzinTerlambatTest" class="method navigator-link" hash-for-method="testPencarianUserValid">testPencarianUserValid</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Hadir" title="com.juaracoding.tajuaracoding.laporan.IzinTerlambatTest" class="method navigator-link" hash-for-method="testVerifyPage">testVerifyPage</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Hadir -->
@@ -184,7 +179,7 @@
                   </a> <!-- negativeTestFilterByUnit -->
                   <span class="method-name">negativeTestFilterByUnit</span>
                   <div class="stack-trace">java.lang.AssertionError: Seharusnya tabel kosong ketika unit tidak ditemukan expected [0] but found [11]
-	at com.juaracoding.tajuaracoding.laporan.IzinTerlambatTest.negativeTestFilterByUnit(IzinTerlambatTest.java:144)
+	at com.juaracoding.tajuaracoding.laporan.IzinTerlambatTest.negativeTestFilterByUnit(IzinTerlambatTest.java:179)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 ... Removed 35 stack frames
 </div> <!-- stack-trace -->
@@ -192,73 +187,18 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="testPenca">
-                  </a> <!-- testPenca -->
-                  <span class="method-name">testPenca</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Unable to locate element: //input[@id=&apos;job_departement&apos;]
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [366a6955-cc21-4a20-b47e-67cbc7100132, findElement {using=xpath, value=//input[@id=&apos;job_departement&apos;]}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 141.0.3, moz:accessibilityChecks: false, moz:buildID: 20250806102122, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 9276, moz:profile: C:\Users\adire\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Session ID: 366a6955-cc21-4a20-b47e-67cbc7100132
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
-	at com.juaracoding.tajuaracoding.laporan.IzinTerlambatTest.testPenca(IzinTerlambatTest.java:40)
+                  <a name="resetTestAllFilter">
+                  </a> <!-- resetTestAllFilter -->
+                  <span class="method-name">resetTestAllFilter</span>
+                  <div class="stack-trace">java.lang.AssertionError: Field UNIT muncul expected [false] but found [true]
+	at com.juaracoding.tajuaracoding.laporan.IzinTerlambatTest.resetTestAllFilter(IzinTerlambatTest.java:310)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 32 stack frames
+... Removed 35 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Hadir-class-failed -->
-          <div class="suite-Hadir-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.juaracoding.tajuaracoding.login.NegativeLoginTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="InvalidEmail">
-                  </a> <!-- InvalidEmail -->
-                  <span class="method-name">InvalidEmail</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="InvalidPassword">
-                  </a> <!-- InvalidPassword -->
-                  <span class="method-name">InvalidPassword</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Hadir-class-passed -->
-          <div class="suite-Hadir-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.juaracoding.tajuaracoding.Dashboard.DashboardTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="VerificationDashboardTest">
-                  </a> <!-- VerificationDashboardTest -->
-                  <span class="method-name">VerificationDashboardTest</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Hadir-class-passed -->
           <div class="suite-Hadir-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -270,6 +210,20 @@ Session ID: 366a6955-cc21-4a20-b47e-67cbc7100132
                   <a name="positiveTestFilterByUnit">
                   </a> <!-- positiveTestFilterByUnit -->
                   <span class="method-name">positiveTestFilterByUnit</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCheckSpecificStatuses">
+                  </a> <!-- testCheckSpecificStatuses -->
+                  <span class="method-name">testCheckSpecificStatuses</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCombinationFilterNameDateUnit">
+                  </a> <!-- testCombinationFilterNameDateUnit -->
+                  <span class="method-name">testCombinationFilterNameDateUnit</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -293,19 +247,11 @@ Session ID: 366a6955-cc21-4a20-b47e-67cbc7100132
                   <span class="method-name">testPencarianUserValid</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Hadir-class-passed -->
-          <div class="suite-Hadir-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.juaracoding.tajuaracoding.login.PositiveLoginTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testLogin">
-                  </a> <!-- testLogin -->
-                  <span class="method-name">testLogin</span>
+                  <a name="testVerifyPage">
+                  </a> <!-- testVerifyPage -->
+                  <span class="method-name">testVerifyPage</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -324,10 +270,6 @@ Session ID: 366a6955-cc21-4a20-b47e-67cbc7100132
   &lt;parameter name=&quot;password&quot; value=&quot;MagangSQA_JC@123&quot;/&gt;
   &lt;parameter name=&quot;username&quot; value=&quot;admin@hadir.com&quot;/&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Login Tests&quot; verbose=&quot;0&quot;&gt;
-    &lt;classes&gt;
-      &lt;class name=&quot;com.juaracoding.tajuaracoding.login.PositiveLoginTest&quot;/&gt;
-      &lt;class name=&quot;com.juaracoding.tajuaracoding.login.NegativeLoginTest&quot;/&gt;
-    &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Login Tests --&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Laporan Tests&quot; verbose=&quot;0&quot;&gt;
     &lt;classes&gt;
@@ -335,9 +277,6 @@ Session ID: 366a6955-cc21-4a20-b47e-67cbc7100132
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Laporan Tests --&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Dashboard Tests&quot; verbose=&quot;0&quot;&gt;
-    &lt;classes&gt;
-      &lt;class name=&quot;com.juaracoding.tajuaracoding.Dashboard.DashboardTest&quot;/&gt;
-    &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Dashboard Tests --&gt;
 &lt;/suite&gt; &lt;!-- Hadir --&gt;
             </pre>
@@ -350,13 +289,13 @@ Session ID: 366a6955-cc21-4a20-b47e-67cbc7100132
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Login Tests (2 classes)</span>
+                <span class="test-name">Login Tests (0 classes)</span>
               </li>
               <li>
                 <span class="test-name">Laporan Tests (1 class)</span>
               </li>
               <li>
-                <span class="test-name">Dashboard Tests (1 class)</span>
+                <span class="test-name">Dashboard Tests (0 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -382,52 +321,48 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(10);
+data.addRows(9);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testDateRangeFilter')
+data.setCell(0, 1, 'resetTestAllFilter')
 data.setCell(0, 2, 'com.juaracoding.tajuaracoding.laporan.IzinTerlambatTest')
-data.setCell(0, 3, 6361);
+data.setCell(0, 3, 16421);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'testPencarianUserTidakAda')
+data.setCell(1, 1, 'testCombinationFilterNameDateUnit')
 data.setCell(1, 2, 'com.juaracoding.tajuaracoding.laporan.IzinTerlambatTest')
-data.setCell(1, 3, 6028);
+data.setCell(1, 3, 16193);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'testPencarianUserValid')
+data.setCell(2, 1, 'positiveTestFilterByUnit')
 data.setCell(2, 2, 'com.juaracoding.tajuaracoding.laporan.IzinTerlambatTest')
-data.setCell(2, 3, 5996);
+data.setCell(2, 3, 13538);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'testPenca')
+data.setCell(3, 1, 'testCheckSpecificStatuses')
 data.setCell(3, 2, 'com.juaracoding.tajuaracoding.laporan.IzinTerlambatTest')
-data.setCell(3, 3, 5419);
+data.setCell(3, 3, 12428);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'InvalidEmail')
-data.setCell(4, 2, 'com.juaracoding.tajuaracoding.login.NegativeLoginTest')
-data.setCell(4, 3, 4686);
+data.setCell(4, 1, 'negativeTestFilterByUnit')
+data.setCell(4, 2, 'com.juaracoding.tajuaracoding.laporan.IzinTerlambatTest')
+data.setCell(4, 3, 8443);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'positiveTestFilterByUnit')
+data.setCell(5, 1, 'testPencarianUserTidakAda')
 data.setCell(5, 2, 'com.juaracoding.tajuaracoding.laporan.IzinTerlambatTest')
-data.setCell(5, 3, 4373);
+data.setCell(5, 3, 7052);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'negativeTestFilterByUnit')
+data.setCell(6, 1, 'testDateRangeFilter')
 data.setCell(6, 2, 'com.juaracoding.tajuaracoding.laporan.IzinTerlambatTest')
-data.setCell(6, 3, 4185);
+data.setCell(6, 3, 6815);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'VerificationDashboardTest')
-data.setCell(7, 2, 'com.juaracoding.tajuaracoding.Dashboard.DashboardTest')
-data.setCell(7, 3, 2729);
+data.setCell(7, 1, 'testPencarianUserValid')
+data.setCell(7, 2, 'com.juaracoding.tajuaracoding.laporan.IzinTerlambatTest')
+data.setCell(7, 3, 6035);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'InvalidPassword')
-data.setCell(8, 2, 'com.juaracoding.tajuaracoding.login.NegativeLoginTest')
-data.setCell(8, 3, 932);
-data.setCell(9, 0, 9)
-data.setCell(9, 1, 'testLogin')
-data.setCell(9, 2, 'com.juaracoding.tajuaracoding.login.PositiveLoginTest')
-data.setCell(9, 3, 753);
+data.setCell(8, 1, 'testVerifyPage')
+data.setCell(8, 2, 'com.juaracoding.tajuaracoding.laporan.IzinTerlambatTest')
+data.setCell(8, 3, 4077);
 window.suiteTableData['Hadir']= { tableData: data, tableDiv: 'times-div-Hadir'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 41 seconds</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Hadir">
               </div> <!-- times-div-Hadir -->
             </div> <!-- times-div -->
@@ -442,16 +377,9 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Hadir" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">1 ignored method</span>
+            <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">com.juaracoding.tajuaracoding.laporan.IzinTerlambatTest</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">testCombinationFilterNameDateUnit</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Hadir" class="panel">
@@ -460,123 +388,118 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.juaracoding.tajuaracoding.login.PositiveLoginTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.juaracoding.tajuaracoding.laporan.IzinTerlambatTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup(https://magang.dikahadir.com/authentication/login, admin@hadir.com, MagangSQA_JC@123)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">testLogin</span>
-                <span class="method-start">4301 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">teardown</span>
-                <span class="method-start">5056 ms</span>
-              </div> <!-- configuration-method after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">com.juaracoding.tajuaracoding.login.NegativeLoginTest</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">InvalidEmail</span>
-                <span class="method-start">6898 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">InvalidPassword</span>
-                <span class="method-start">11585 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">com.juaracoding.tajuaracoding.laporan.IzinTerlambatTest</div> <!-- chronological-class-name -->
-              <div class="configuration-method before">
-                <span class="method-name">setup(https://magang.dikahadir.com/authentication/login, admin@hadir.com, MagangSQA_JC@123)</span>
-                <span class="method-start">12544 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">negativeTestFilterByUnit</span>
-                <span class="method-start">12915 ms</span>
+                <span class="method-start">4936 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">17103 ms</span>
+                <span class="method-start">13388 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setup(https://magang.dikahadir.com/authentication/login, admin@hadir.com, MagangSQA_JC@123)</span>
-                <span class="method-start">18934 ms</span>
+                <span class="method-start">15241 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">positiveTestFilterByUnit</span>
-                <span class="method-start">22333 ms</span>
+                <span class="method-start">19752 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">26707 ms</span>
+                <span class="method-start">33290 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setup(https://magang.dikahadir.com/authentication/login, admin@hadir.com, MagangSQA_JC@123)</span>
-                <span class="method-start">28471 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">testDateRangeFilter</span>
-                <span class="method-start">31881 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">teardown</span>
-                <span class="method-start">38242 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setup(https://magang.dikahadir.com/authentication/login, admin@hadir.com, MagangSQA_JC@123)</span>
-                <span class="method-start">40053 ms</span>
+                <span class="method-start">34970 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">testPenca</span>
-                <span class="method-start">43645 ms</span>
+                <span class="method-name">resetTestAllFilter</span>
+                <span class="method-start">39096 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">49066 ms</span>
+                <span class="method-start">55518 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setup(https://magang.dikahadir.com/authentication/login, admin@hadir.com, MagangSQA_JC@123)</span>
-                <span class="method-start">50886 ms</span>
+                <span class="method-start">57212 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testCheckSpecificStatuses</span>
+                <span class="method-start">61226 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">73654 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(https://magang.dikahadir.com/authentication/login, admin@hadir.com, MagangSQA_JC@123)</span>
+                <span class="method-start">75385 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testCombinationFilterNameDateUnit</span>
+                <span class="method-start">79564 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">95757 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(https://magang.dikahadir.com/authentication/login, admin@hadir.com, MagangSQA_JC@123)</span>
+                <span class="method-start">97416 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testDateRangeFilter</span>
+                <span class="method-start">101684 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">108500 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(https://magang.dikahadir.com/authentication/login, admin@hadir.com, MagangSQA_JC@123)</span>
+                <span class="method-start">110323 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testPencarianUserTidakAda</span>
-                <span class="method-start">54808 ms</span>
+                <span class="method-start">114805 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">60837 ms</span>
+                <span class="method-start">121857 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setup(https://magang.dikahadir.com/authentication/login, admin@hadir.com, MagangSQA_JC@123)</span>
-                <span class="method-start">62650 ms</span>
+                <span class="method-start">123565 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testPencarianUserValid</span>
-                <span class="method-start">66630 ms</span>
+                <span class="method-start">127650 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">72627 ms</span>
+                <span class="method-start">133686 ms</span>
               </div> <!-- configuration-method after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">com.juaracoding.tajuaracoding.Dashboard.DashboardTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup(https://magang.dikahadir.com/authentication/login, admin@hadir.com, MagangSQA_JC@123)</span>
-                <span class="method-start">74570 ms</span>
+                <span class="method-start">135617 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">VerificationDashboardTest</span>
-                <span class="method-start">78025 ms</span>
+                <span class="method-name">testVerifyPage</span>
+                <span class="method-start">140678 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">80755 ms</span>
+                <span class="method-start">144755 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

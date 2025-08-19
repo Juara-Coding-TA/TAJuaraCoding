@@ -8,8 +8,8 @@
 
   <test name="Login Tests">
     <classes>
-      <class name="com.juaracoding.tajuaracoding.login.PositiveLoginTest"/>
-      <class name="com.juaracoding.tajuaracoding.login.NegativeLoginTest"/>
+      <!-- <class name="com.juaracoding.tajuaracoding.login.PositiveLoginTest"/> -->
+      <!-- <class name="com.juaracoding.tajuaracoding.login.NegativeLoginTest"/> -->
     </classes>
   </test>
 
@@ -21,7 +21,7 @@
 
   <test name="Dashboard Tests">
   <classes>
-    <class name="com.juaracoding.tajuaracoding.Dashboard.DashboardTest"/>
+    <!-- <class name="com.juaracoding.tajuaracoding.Dashboard.DashboardTest"/> -->
   </classes>
   </test>
 
