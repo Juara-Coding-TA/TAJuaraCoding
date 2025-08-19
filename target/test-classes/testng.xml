@@ -22,6 +22,7 @@
   <test name="Dashboard Tests">
   <classes>
     <class name="com.juaracoding.tajuaracoding.Dashboard.DashboardTest"/>
+    <class name="com.juaracoding.tajuaracoding.Dashboard.PendingDashboardTest"/>
   </classes>
   </test>
 
