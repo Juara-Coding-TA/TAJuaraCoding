@@ -7,10 +7,10 @@
 
   <test name="Login Tests">
     <classes>
-      <!-- <class name="com.juaracoding.tajuaracoding.login.PositiveLoginTest"/> -->
-      <!-- <class name="com.juaracoding.tajuaracoding.login.NegativeLoginTest"/> -->
+      <class name="com.juaracoding.tajuaracoding.login.PositiveLoginTest"/> 
+      <class name="com.juaracoding.tajuaracoding.login.NegativeLoginTest"/> 
     </classes>
-  </test>
+  </test> 
 
   <test name="Laporan Tests">
     <classes>
