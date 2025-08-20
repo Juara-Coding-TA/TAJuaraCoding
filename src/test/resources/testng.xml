@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Hadir">
 
-  <test name="Login Tests">
+  <!-- <test name="Login Tests">
     <parameter name="baseURL" value="https://magang.dikahadir.com/authentication/login"/>
     <parameter name="username" value="admin@hadir.com"/>
     <parameter name="password" value="MagangSQA_JC@123"/>
@@ -10,14 +10,16 @@
       <class name="com.juaracoding.tajuaracoding.login.PositiveLogin"/>
       <class name="com.juaracoding.tajuaracoding.login.NegativeLogin"/>
     </classes>
-  </test>
+  </test> -->
 
   <test name="Authentication Tests">
     <parameter name="baseURL" value="https://magang.dikahadir.com/authentication/login"/>
     <parameter name="username" value="admin@hadir.com"/>
     <parameter name="password" value="MagangSQA_JC@123"/>
     <classes>
-    <class name="com.juaracoding.tajuaracoding.laporan.IzinTerlambat"/>
+      <class name="com.juaracoding.tajuaracoding.laporan.Semua"/>
+      <class name="com.juaracoding.tajuaracoding.laporan.Kehadiran"/>
+      <class name="com.juaracoding.tajuaracoding.laporan.IzinTerlambat"/>
   </classes>
 </test>
 

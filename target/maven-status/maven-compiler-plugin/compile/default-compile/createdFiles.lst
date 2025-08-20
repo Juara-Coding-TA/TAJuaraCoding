@@ -1,4 +1,6 @@
 com\juaracoding\tajuaracoding\pages\components\Navbar.class
 com\juaracoding\tajuaracoding\pages\LoginPage.class
+com\juaracoding\tajuaracoding\pages\SemuaPage.class
+com\juaracoding\tajuaracoding\pages\KehadiranPage.class
 com\juaracoding\tajuaracoding\utils\DriverUtil.class
 com\juaracoding\tajuaracoding\pages\IzinTerlambatPage.class

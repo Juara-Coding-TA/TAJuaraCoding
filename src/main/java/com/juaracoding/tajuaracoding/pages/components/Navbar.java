@@ -15,6 +15,8 @@ public class Navbar {
     private By subMenuIzinTerlambat = By.xpath("//p[normalize-space()='Izin Terlambat']");
     private By subMenuIzinPulangCepat = By.xpath("//div[p[normalize-space(text())='Izin Pulang Cepat']]");
     private By subMenuCuti = By.xpath("//div[@class='MuiBox-root css-zb4pxb']//p[normalize-space(.)='Cuti']");
+    private By subMenuSemua = By.xpath("//div[@class='MuiBox-root css-1pd2x36']//p[normalize-space(.)='Semua']");    
+    private By subMenuKehadiran = By.xpath("//div[@class='MuiBox-root css-1pd2x36']//p[normalize-space(.)='Kehadiran']");    
 
     public Navbar(WebDriver driver) {
         this.driver = driver;
@@ -38,6 +40,19 @@ public class Navbar {
 
     public void clickCuti() {
         driver.findElement(subMenuCuti).click();
+    }
+
+    public void clickSemua() {
+        // TODO Auto-generated method stub
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebElement Semua = wait.until(ExpectedConditions.elementToBeClickable(subMenuSemua));
+        Semua.click();
+    }
+
+    public void clickKehadiran() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebElement Kehadiran = wait.until(ExpectedConditions.elementToBeClickable(subMenuKehadiran));
+        Kehadiran.click();
     }
 
 }
