@@ -37,8 +37,7 @@ public class DashBoardPage {
     private By saveButton = By.xpath("(//button[normalize-space()='save'])[1]");
     private By cancelButtonCalendar = By.xpath("(//button[normalize-space()='cancel'])[1]");
     private By dataRows = By.xpath("//tbody/tr");
-
-    // Month/Year navigation Calendar
+    public By filterByModal = By.xpath("/html/body/div[3]/div[3]/div");
 
 
     // Icon Red Filter
@@ -199,4 +198,14 @@ public class DashBoardPage {
                 .map(WebElement::getText)
                 .collect(Collectors.toList());
     }
+
+    public void clickFilterUnit(){
+        DriverUtil.getDriver().findElement(filterByUnitButton).click();
+    }
+
+    public void clickApply(){
+        DriverUtil.getDriver().findElement(applyButton).click();
+    }
+
+
 }
