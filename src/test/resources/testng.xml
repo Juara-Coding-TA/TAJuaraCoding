@@ -5,18 +5,33 @@
   <parameter name="username" value="admin@hadir.com"/>
   <parameter name="password" value="MagangSQA_JC@123"/>
 
+<<<<<<< HEAD
   <test name="Login Tests">
+=======
+  <!-- <test name="Login Tests">
+    <parameter name="baseURL" value="https://magang.dikahadir.com/authentication/login"/>
+    <parameter name="username" value="admin@hadir.com"/>
+    <parameter name="password" value="MagangSQA_JC@123"/>
+>>>>>>> origin/semua-kehadiran-laporan
     <classes>
       <!-- <class name="com.juaracoding.tajuaracoding.login.PositiveLoginTest"/> -->
       <!-- <class name="com.juaracoding.tajuaracoding.login.NegativeLoginTest"/> -->
     </classes>
-  </test>
+  </test> -->
 
   <test name="Laporan Tests">
     <classes>
+<<<<<<< HEAD
       <class name="com.juaracoding.tajuaracoding.laporan.IzinTerlambatTest"/>
     </classes>
   </test>
+=======
+      <class name="com.juaracoding.tajuaracoding.laporan.Semua"/>
+      <class name="com.juaracoding.tajuaracoding.laporan.Kehadiran"/>
+      <class name="com.juaracoding.tajuaracoding.laporan.IzinTerlambat"/>
+  </classes>
+</test>
+>>>>>>> origin/semua-kehadiran-laporan
 
   <test name="Dashboard Tests">
     <classes>
