@@ -51,7 +51,6 @@ public class Navbar {
     }
 
       public void clickSemua() {
-        // TODO Auto-generated method stub
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         WebElement Semua = wait.until(ExpectedConditions.elementToBeClickable(subMenuSemua));
         Semua.click();

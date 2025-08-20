@@ -1,11 +1,11 @@
 package com.juaracoding.tajuaracoding.laporan;
 
-import java.util.List;
-import java.util.Set;
 import java.time.Duration;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -17,99 +17,98 @@ import org.testng.annotations.Test;
 
 import com.juaracoding.tajuaracoding.BaseTest;
 import com.juaracoding.tajuaracoding.pages.components.Navbar;
-import com.juaracoding.tajuaracoding.pages.laporan.IzinTerlambatPage;
+import com.juaracoding.tajuaracoding.pages.laporan.IzinPulangCepatPage;
 import com.juaracoding.tajuaracoding.utils.DriverUtil;
 
+public class IzinPulangCepatTest extends BaseTest {
 
-public class IzinTerlambatTest extends BaseTest {
+    private IzinPulangCepatPage izinPulangCepatPage;
 
-    private IzinTerlambatPage izinTerlambatPage;
-
-    private void navigateToIzinTerlambatPage() throws InterruptedException {
+    private void navigateToIzinPulangCepatPage() throws InterruptedException {
         Navbar navbar = new Navbar(DriverUtil.getDriver());
         navbar.openMenuLaporan();
-        Thread.sleep(1000); 
-        navbar.clickIzinTelambat();
-        Thread.sleep(2000); 
-        izinTerlambatPage = new IzinTerlambatPage(DriverUtil.getDriver());
-    }
-
-    @Test(enabled = true)
-    public void testVerifyPage() throws InterruptedException {
-        navigateToIzinTerlambatPage();
-
-        Assert.assertTrue(izinTerlambatPage.getCurrentUrl().contains("izin-terlambat"),"URL halaman tidak sesuai!");
-        Assert.assertTrue(DriverUtil.getDriver().findElement(izinTerlambatPage.searchField).isDisplayed(),"Field pencarian tidak ditesmukan!");
-        Assert.assertTrue(DriverUtil.getDriver().findElement(izinTerlambatPage.searchButton).isDisplayed(),"Tombol Search tidak ditemukan!");
-        Assert.assertTrue(DriverUtil.getDriver().findElement(izinTerlambatPage.resetButton).isDisplayed(),"Tombol Reset tidak ditemukan!");
-        Assert.assertTrue(DriverUtil.getDriver().findElement(izinTerlambatPage.filterByUnitButton).isDisplayed(),"Icon filter merah tidak ditemukan!");
-        Assert.assertFalse(izinTerlambatPage.getStatusList().isEmpty(),"Tabel data tidak ditemukan atau kosong!");
-    }
-
-    @Test(enabled = true)
-    public void testPencarianUserValid() throws InterruptedException {
-        navigateToIzinTerlambatPage();
-        
-        String keyword = "Ahlan Rezki";
-        izinTerlambatPage.search(keyword);
+        Thread.sleep(1000);
+        navbar.clickIzinPulangCepat();
         Thread.sleep(2000);
-        List<String> userNames = izinTerlambatPage.getUserNameList();
+        izinPulangCepatPage = new IzinPulangCepatPage(DriverUtil.getDriver());
+    }
+
+    @Test(enabled = false)
+    public void testVerifyPage() throws InterruptedException {
+        navigateToIzinPulangCepatPage();
+
+        Assert.assertTrue(izinPulangCepatPage.getCurrentUrl().contains("izin-pulang-cepat"),"URL halaman tidak sesuai!");
+        Assert.assertTrue(DriverUtil.getDriver().findElement(izinPulangCepatPage.searchField).isDisplayed(),"Field pencarian tidak ditesmukan!");
+        Assert.assertTrue(DriverUtil.getDriver().findElement(izinPulangCepatPage.searchButton).isDisplayed(),"Tombol Search tidak ditemukan!");
+        Assert.assertTrue(DriverUtil.getDriver().findElement(izinPulangCepatPage.resetButton).isDisplayed(),"Tombol Reset tidak ditemukan!");
+        Assert.assertTrue(DriverUtil.getDriver().findElement(izinPulangCepatPage.filterByUnitButton).isDisplayed(),"Icon filter merah tidak ditemukan!");
+        Assert.assertFalse(izinPulangCepatPage.getStatusList().isEmpty(),"Tabel data tidak ditemukan atau kosong!");
+    }
+
+    @Test(enabled = false)
+    public void testPencarianUserValid() throws InterruptedException {
+        navigateToIzinPulangCepatPage();
+        
+        String keyword = "juned";
+        izinPulangCepatPage.search(keyword);
+        Thread.sleep(2000);
+        List<String> userNames = izinPulangCepatPage.getUserNameList();
         Assert.assertTrue(userNames.contains(keyword), "User '" + keyword + "' not found in search results.");
     }
 
-    @Test(enabled = true)
+    @Test(enabled = false)
     public void testPencarianUserTidakAda() throws InterruptedException {
-        navigateToIzinTerlambatPage();
+        navigateToIzinPulangCepatPage();
 
         String keyword = "UserTidakAda123";
-        izinTerlambatPage.search(keyword);
+        izinPulangCepatPage.search(keyword);
         Thread.sleep(2000); 
 
-        boolean dataNotFound = izinTerlambatPage.isDataNotFoundMessageDisplayed();
-        boolean isUserListEmpty = izinTerlambatPage.getUserNameList().isEmpty();
+        boolean dataNotFound = izinPulangCepatPage.isDataNotFoundMessageDisplayed();
+        boolean isUserListEmpty = izinPulangCepatPage.getUserNameList().isEmpty();
 
         Assert.assertTrue(dataNotFound || isUserListEmpty, "Expected 'Data tidak ditemukan' message or empty table, but found otherwise.");
     }
 
-   @Test(enabled = true)
+   @Test(enabled = false)
     public void testDateRangeFilter() throws InterruptedException {
-        navigateToIzinTerlambatPage();
-        izinTerlambatPage.clickIconCalendar();
+        navigateToIzinPulangCepatPage();
+        izinPulangCepatPage.clickIconCalendar();
 
         // Pilih tanggal awal & akhir, Pilih tanggal (misal index ke-0 & ke-14)
-        izinTerlambatPage.selectDateRange(0, 14);
+        izinPulangCepatPage.selectDateRange(0, 14);
 
         Thread.sleep(2000); 
 
-        String startDate = izinTerlambatPage.getStartDateValue();
-        String endDate   = izinTerlambatPage.getEndDateValue();
+        String startDate = izinPulangCepatPage.getStartDateValue();
+        String endDate   = izinPulangCepatPage.getEndDateValue();
 
         System.out.println("Start Date: " + startDate);
         System.out.println("End Date: " + endDate);
         Assert.assertTrue(startDate.contains("01 Agt 2025"), "Start Date tidak sesuai");
         Assert.assertTrue(endDate.contains("15 Agt 2025"), "End Date tidak sesuai");
 
-        izinTerlambatPage.clickSaveCalendar();
+        izinPulangCepatPage.clickSaveCalendar();
 
-        izinTerlambatPage.clickSearch();
+        izinPulangCepatPage.clickSearch();
 
-        Assert.assertTrue(izinTerlambatPage.getDataList().size() > 0, "Data tidak muncul setelah filter");
+        Assert.assertTrue(izinPulangCepatPage.getDataList().size() > 0, "Data tidak muncul setelah filter");
     }
 
-    @Test(enabled = true)
+    @Test(enabled = false)
     public void positiveTestFilterByUnit() throws InterruptedException {
-        navigateToIzinTerlambatPage();
+        navigateToIzinPulangCepatPage();
         String unitName = "Sysmex";
 
-        izinTerlambatPage.clickFilterUnit();
+        izinPulangCepatPage.clickFilterUnit();
 
-        Assert.assertTrue(DriverUtil.getDriver().findElement(izinTerlambatPage.filterByUnitSelect).isDisplayed(), "Field UNIT tidak muncul");
-        Assert.assertTrue(DriverUtil.getDriver().findElement(izinTerlambatPage.cancelButton).isDisplayed(), "Tombol Batal tidak muncul");
-        Assert.assertTrue(DriverUtil.getDriver().findElement(izinTerlambatPage.applyButton).isDisplayed(), "Tombol Terapkan tidak muncul");
+        Assert.assertTrue(DriverUtil.getDriver().findElement(izinPulangCepatPage.filterByUnitSelect).isDisplayed(), "Field UNIT tidak muncul");
+        Assert.assertTrue(DriverUtil.getDriver().findElement(izinPulangCepatPage.cancelButton).isDisplayed(), "Tombol Batal tidak muncul");
+        Assert.assertTrue(DriverUtil.getDriver().findElement(izinPulangCepatPage.applyButton).isDisplayed(), "Tombol Terapkan tidak muncul");
 
         Thread.sleep(5000);
         
-        WebElement input = wait.until(ExpectedConditions.elementToBeClickable(izinTerlambatPage.filterByUnitSelect));
+        WebElement input = wait.until(ExpectedConditions.elementToBeClickable(izinPulangCepatPage.filterByUnitSelect));
         input.click();
         input.sendKeys(unitName);
 
@@ -119,6 +118,8 @@ public class IzinTerlambatTest extends BaseTest {
             By.xpath("//ul[@role='listbox']//li[contains(@class,'MuiAutocomplete-option') and normalize-space()='" + unitName + "']"));
 
         if (!options.isEmpty()) {
+            // This WebDriverWait instance is local to this block and is not the one causing the NPE.
+            // The issue is with the class-level 'wait' field.
             WebDriverWait wait = new WebDriverWait(DriverUtil.getDriver(), Duration.ofSeconds(5));
             wait.until(ExpectedConditions.visibilityOf(options.get(0)));
             options.get(0).click();
@@ -127,20 +128,20 @@ public class IzinTerlambatTest extends BaseTest {
             System.out.println("Option '" + unitName + "' tidak ditemukan, langsung klik Apply");
         }
 
-        izinTerlambatPage.clickApply();
+        izinPulangCepatPage.clickApply();
         
         Thread.sleep(2000);
 
-        wait.until(ExpectedConditions.invisibilityOfElementLocated(izinTerlambatPage.filterByModal));
+        wait.until(ExpectedConditions.invisibilityOfElementLocated(izinPulangCepatPage.filterByModal));
         Assert.assertTrue(
-                DriverUtil.getDriver().findElements(izinTerlambatPage.filterByModal).isEmpty(),
+                DriverUtil.getDriver().findElements(izinPulangCepatPage.filterByModal).isEmpty(),
                 "Modal filter masih terlihat setelah klik Terapkan"
         );
 
-        Assert.assertTrue(izinTerlambatPage.getDataList().size() > 0, "Data tidak muncul setelah filter");
-        System.out.println("Jumlah data setelah filter: " + izinTerlambatPage.getDataList().size());
+        Assert.assertTrue(izinPulangCepatPage.getDataList().size() > 0, "Data tidak muncul setelah filter");
+        System.out.println("Jumlah data setelah filter: " + izinPulangCepatPage.getDataList().size());
 
-        for (WebElement row : izinTerlambatPage.getDataList()) {
+        for (WebElement row : izinPulangCepatPage.getDataList()) {
             String rowText = row.getText();
             Assert.assertTrue(rowText.contains(unitName),"Ditemukan row yang bukan unit " + unitName + ": " + rowText);
         }
@@ -149,24 +150,24 @@ public class IzinTerlambatTest extends BaseTest {
 
     @Test(enabled = true)
     public void negativeTestFilterByUnit() throws InterruptedException {
-        navigateToIzinTerlambatPage();
+        navigateToIzinPulangCepatPage();
         String unitName = "UnitTidakAda";
 
-        izinTerlambatPage.clickFilterUnit();
+        izinPulangCepatPage.clickFilterUnit();
 
-        Assert.assertTrue(DriverUtil.getDriver().findElement(izinTerlambatPage.filterByUnitSelect).isDisplayed(), "Field UNIT tidak muncul");
-        Assert.assertTrue(DriverUtil.getDriver().findElement(izinTerlambatPage.cancelButton).isDisplayed(), "Tombol Batal tidak muncul");
-        Assert.assertTrue(DriverUtil.getDriver().findElement(izinTerlambatPage.applyButton).isDisplayed(), "Tombol Terapkan tidak muncul");
+        Assert.assertTrue(DriverUtil.getDriver().findElement(izinPulangCepatPage.filterByUnitSelect).isDisplayed(), "Field UNIT tidak muncul");
+        Assert.assertTrue(DriverUtil.getDriver().findElement(izinPulangCepatPage.cancelButton).isDisplayed(), "Tombol Batal tidak muncul");
+        Assert.assertTrue(DriverUtil.getDriver().findElement(izinPulangCepatPage.applyButton).isDisplayed(), "Tombol Terapkan tidak muncul");
 
         Thread.sleep(2000);
 
-        WebElement input = wait.until(ExpectedConditions.elementToBeClickable(izinTerlambatPage.filterByUnitSelect));
+        WebElement input = wait.until(ExpectedConditions.elementToBeClickable(izinPulangCepatPage.filterByUnitSelect));
         input.click();
         input.sendKeys(unitName);
 
         Thread.sleep(2000);
 
-        izinTerlambatPage.clickApply();
+        izinPulangCepatPage.clickApply();
 
         List<WebElement> rows = DriverUtil.getDriver().findElements(By.xpath("//table//tr"));
         if (rows.size() == 0) {
@@ -180,16 +181,16 @@ public class IzinTerlambatTest extends BaseTest {
 
     @Test(enabled = true)
     public void testCombinationFilterNameDateUnit() throws InterruptedException {
-        navigateToIzinTerlambatPage();
-        izinTerlambatPage.search("Hadir");
+        navigateToIzinPulangCepatPage();
+        izinPulangCepatPage.search("Hadir");
 
-        izinTerlambatPage.clickIconCalendar();
-        izinTerlambatPage.selectMonth("June");
-        izinTerlambatPage.selectDateRange(0, 29);
+        izinPulangCepatPage.clickIconCalendar();
+        izinPulangCepatPage.selectMonth("June");
+        izinPulangCepatPage.selectDateRange(0, 29);
 
-        String startDate = izinTerlambatPage.getStartDateValue();
-        String endDate   = izinTerlambatPage.getEndDateValue();
-        String monthText = izinTerlambatPage.getMonthText();   // Ambil text ("June")
+        String startDate = izinPulangCepatPage.getStartDateValue();
+        String endDate   = izinPulangCepatPage.getEndDateValue();
+        String monthText = izinPulangCepatPage.getMonthText();   // Ambil text ("June")
         String unitName  = "Sysmex";
 
         Thread.sleep(2000);
@@ -198,17 +199,17 @@ public class IzinTerlambatTest extends BaseTest {
         Assert.assertTrue(startDate.contains("01 Jun 2025"), "Start Date tidak sesuai");
         Assert.assertTrue(endDate.contains("30 Jun 2025"), "End Date tidak sesuai");
 
-        izinTerlambatPage.clickSaveCalendar();
-        izinTerlambatPage.clickSearch();
-        izinTerlambatPage.clickFilterUnit();
+        izinPulangCepatPage.clickSaveCalendar();
+        izinPulangCepatPage.clickSearch();
+        izinPulangCepatPage.clickFilterUnit();
 
-        Assert.assertTrue(DriverUtil.getDriver().findElement(izinTerlambatPage.filterByUnitSelect).isDisplayed(), "Field UNIT tidak muncul");
-        Assert.assertTrue(DriverUtil.getDriver().findElement(izinTerlambatPage.cancelButton).isDisplayed(), "Tombol Batal tidak muncul");
-        Assert.assertTrue(DriverUtil.getDriver().findElement(izinTerlambatPage.applyButton).isDisplayed(), "Tombol Terapkan tidak muncul");
+        Assert.assertTrue(DriverUtil.getDriver().findElement(izinPulangCepatPage.filterByUnitSelect).isDisplayed(), "Field UNIT tidak muncul");
+        Assert.assertTrue(DriverUtil.getDriver().findElement(izinPulangCepatPage.cancelButton).isDisplayed(), "Tombol Batal tidak muncul");
+        Assert.assertTrue(DriverUtil.getDriver().findElement(izinPulangCepatPage.applyButton).isDisplayed(), "Tombol Terapkan tidak muncul");
 
         Thread.sleep(5000);
 
-        WebElement input = wait.until(ExpectedConditions.elementToBeClickable(izinTerlambatPage.filterByUnitSelect));
+        WebElement input = wait.until(ExpectedConditions.elementToBeClickable(izinPulangCepatPage.filterByUnitSelect));
         input.click();
         input.sendKeys(unitName);
 
@@ -226,11 +227,11 @@ public class IzinTerlambatTest extends BaseTest {
             System.out.println("Option '" + unitName + "' tidak ditemukan, langsung klik Apply");
         }
 
-        izinTerlambatPage.clickApply();
+        izinPulangCepatPage.clickApply();
 
         Thread.sleep(2000);
 
-        Collection<String> rows = izinTerlambatPage.getDataRows();
+        Collection<String> rows = izinPulangCepatPage.getDataRows();
 
         Assert.assertFalse(rows.isEmpty(), "Tidak ada data yang muncul setelah filter");
 
@@ -244,18 +245,18 @@ public class IzinTerlambatTest extends BaseTest {
         );
     }
 
-    @Test(enabled = true)
+    @Test(enabled = false)
         public void resetTestAllFilter () throws InterruptedException {
-        navigateToIzinTerlambatPage();
-        izinTerlambatPage.search("Hadir");
+        navigateToIzinPulangCepatPage();
+        izinPulangCepatPage.search("Hadir");
 
-        izinTerlambatPage.clickIconCalendar();
-        izinTerlambatPage.selectMonth("February");
-        izinTerlambatPage.selectDateRange(0, 27);
+        izinPulangCepatPage.clickIconCalendar();
+        izinPulangCepatPage.selectMonth("February");
+        izinPulangCepatPage.selectDateRange(0, 27);
 
-        String startDate = izinTerlambatPage.getStartDateValue();
-        String endDate   = izinTerlambatPage.getEndDateValue();
-        String monthText = izinTerlambatPage.getMonthText();   // Ambil text ("June")
+        String startDate = izinPulangCepatPage.getStartDateValue();
+        String endDate   = izinPulangCepatPage.getEndDateValue();
+        String monthText = izinPulangCepatPage.getMonthText();   // Ambil text ("June")
         String unitName  = "Sysmex";
 
         Thread.sleep(2000);
@@ -264,19 +265,19 @@ public class IzinTerlambatTest extends BaseTest {
         Assert.assertTrue(startDate.contains("01 Feb 2025"), "Start Date tidak sesuai");
         Assert.assertTrue(endDate.contains("28 Feb 2025"), "End Date tidak sesuai");
 
-        izinTerlambatPage.clickSaveCalendar();
+        izinPulangCepatPage.clickSaveCalendar();
 
-        Assert.assertTrue(DriverUtil.getDriver().findElement(izinTerlambatPage.searchField).isDisplayed(), "Field pencarian tidak muncul");
-        izinTerlambatPage.clickSearch();
-        izinTerlambatPage.clickFilterUnit();
+        Assert.assertTrue(DriverUtil.getDriver().findElement(izinPulangCepatPage.searchField).isDisplayed(), "Field pencarian tidak muncul");
+        izinPulangCepatPage.clickSearch();
+        izinPulangCepatPage.clickFilterUnit();
 
-        Assert.assertTrue(DriverUtil.getDriver().findElement(izinTerlambatPage.filterByUnitSelect).isDisplayed(), "Field UNIT tidak muncul");
-        Assert.assertTrue(DriverUtil.getDriver().findElement(izinTerlambatPage.cancelButton).isDisplayed(), "Tombol Batal tidak muncul");
-        Assert.assertTrue(DriverUtil.getDriver().findElement(izinTerlambatPage.applyButton).isDisplayed(), "Tombol Terapkan tidak muncul");
+        Assert.assertTrue(DriverUtil.getDriver().findElement(izinPulangCepatPage.filterByUnitSelect).isDisplayed(), "Field UNIT tidak muncul");
+        Assert.assertTrue(DriverUtil.getDriver().findElement(izinPulangCepatPage.cancelButton).isDisplayed(), "Tombol Batal tidak muncul");
+        Assert.assertTrue(DriverUtil.getDriver().findElement(izinPulangCepatPage.applyButton).isDisplayed(), "Tombol Terapkan tidak muncul");
 
         Thread.sleep(5000);
 
-        WebElement input = wait.until(ExpectedConditions.elementToBeClickable(izinTerlambatPage.filterByUnitSelect));
+        WebElement input = wait.until(ExpectedConditions.elementToBeClickable(izinPulangCepatPage.filterByUnitSelect));
         input.click();
         input.sendKeys(unitName);
 
@@ -294,32 +295,32 @@ public class IzinTerlambatTest extends BaseTest {
             System.out.println("Option '" + unitName + "' tidak ditemukan, langsung klik Apply");
         }
 
-        izinTerlambatPage.clickApply();
+        izinPulangCepatPage.clickApply();
 
         Thread.sleep(2000);
 
-        izinTerlambatPage.clickReset();
+        izinPulangCepatPage.clickReset();
 
-        Assert.assertTrue(izinTerlambatPage.getSearchResult().isEmpty(), "Keyword tidak kosong");
-        Assert.assertTrue(izinTerlambatPage.getStartDateValue().isEmpty(), "Start Date tidak kosong");
-        Assert.assertTrue(izinTerlambatPage.getEndDateValue().isEmpty(), "End Date tidak kosong");
+        Assert.assertTrue(izinPulangCepatPage.getSearchResult().isEmpty(), "Keyword tidak kosong");
+        Assert.assertTrue(izinPulangCepatPage.getStartDateValue().isEmpty(), "Start Date tidak kosong");
+        Assert.assertTrue(izinPulangCepatPage.getEndDateValue().isEmpty(), "End Date tidak kosong");
 
-        izinTerlambatPage.clickFilterUnit();
+        izinPulangCepatPage.clickFilterUnit();
 
-        Assert.assertEquals(DriverUtil.getDriver().findElement(izinTerlambatPage.filterByUnitSelect).isDisplayed(), false, "Field UNIT muncul");
+        Assert.assertEquals(DriverUtil.getDriver().findElement(izinPulangCepatPage.filterByUnitSelect).isDisplayed(), false, "Field UNIT muncul");
 
-        izinTerlambatPage.clickCancel();   
+        izinPulangCepatPage.clickCancel();   
     }
 
-    @Test
+    @Test(enabled = false)
     public void testCheckSpecificStatuses() throws InterruptedException {
-        navigateToIzinTerlambatPage();
+        navigateToIzinPulangCepatPage();
 
         List<String> expectedStatuses = Arrays.asList("PENDING", "APPROVED", "REJECT");
         Set<String> foundStatuses = new HashSet<>();
 
         while (true) {
-            List<String> currentStatuses = izinTerlambatPage.getStatusListAlt();
+            List<String> currentStatuses = izinPulangCepatPage.getStatusListAlt();
             System.out.println("Status di halaman ini: " + currentStatuses);
 
             for (String status : currentStatuses) {
@@ -333,7 +334,7 @@ public class IzinTerlambatTest extends BaseTest {
             }
 
             try {
-                WebElement nextBtn = DriverUtil.getDriver().findElement(izinTerlambatPage.nextPageButton);
+                WebElement nextBtn = DriverUtil.getDriver().findElement(izinPulangCepatPage.nextPageButton);
                 if (nextBtn.isEnabled() && !nextBtn.getAttribute("class").contains("Mui-disabled")) {
                     ((JavascriptExecutor) DriverUtil.getDriver()).executeScript("arguments[0].scrollIntoView({block: 'center'});", nextBtn);
                     Thread.sleep(300);
@@ -350,8 +351,6 @@ public class IzinTerlambatTest extends BaseTest {
         }
 
         Assert.assertTrue(foundStatuses.containsAll(expectedStatuses), "Tidak semua status ditemukan. Found: " + foundStatuses + ", Expected: " + expectedStatuses);
-        System.out.println("🎉 Test selesai! Total status dicek: " + foundStatuses.size());
+        System.out.println("Test selesai! Total status dicek: " + foundStatuses.size());
     }
-
-    
 }

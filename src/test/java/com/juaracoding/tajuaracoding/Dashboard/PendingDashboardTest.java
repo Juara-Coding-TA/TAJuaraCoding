@@ -1,7 +1,7 @@
 package com.juaracoding.tajuaracoding.Dashboard;
 
 import com.juaracoding.tajuaracoding.BaseTest;
-import com.juaracoding.tajuaracoding.pages.DashBoardPage;
+import com.juaracoding.tajuaracoding.pages.dashboard.DashBoardPage;
 import com.juaracoding.tajuaracoding.utils.DriverUtil;
 import org.testng.Assert;
 import org.testng.annotations.Test;

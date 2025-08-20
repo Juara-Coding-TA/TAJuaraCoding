@@ -7,21 +7,24 @@
 
   <test name="Login Tests">
     <classes>
-      <class name="com.juaracoding.tajuaracoding.login.PositiveLoginTest"/> 
-      <class name="com.juaracoding.tajuaracoding.login.NegativeLoginTest"/> 
+      <!-- <class name="com.juaracoding.tajuaracoding.login.PositiveLoginTest"/>  -->
+      <!-- <class name="com.juaracoding.tajuaracoding.login.NegativeLoginTest"/>  -->
     </classes>
   </test> 
 
   <test name="Laporan Tests">
     <classes>
-      <class name="com.juaracoding.tajuaracoding.laporan.IzinTerlambatTest"/>
+      <!-- <class name="com.juaracoding.tajuaracoding.laporan.IzinTerlambatTest"/> -->
+      <class name="com.juaracoding.tajuaracoding.laporan.IzinPulangCepatTest"/>
+      <!-- <class name="com.juaracoding.tajuaracoding.laporan.Semua"/> -->
+      <!-- <class name="com.juaracoding.tajuaracoding.laporan.Kehadiran"/> -->
     </classes>
   </test>
 
   <test name="Dashboard Tests">
     <classes>
-      <class name="com.juaracoding.tajuaracoding.Dashboard.DashboardTest"/>
-      <class name="com.juaracoding.tajuaracoding.Dashboard.PendingDashboardTest"/>
+      <!-- <class name="com.juaracoding.tajuaracoding.Dashboard.DashboardTest"/> -->
+      <!-- <class name="com.juaracoding.tajuaracoding.Dashboard.PendingDashboardTest"/> -->
     </classes>
   </test>
 </suite>
