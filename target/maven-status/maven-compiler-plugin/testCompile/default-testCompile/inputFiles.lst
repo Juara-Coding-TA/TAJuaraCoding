@@ -1,5 +1,9 @@
 C:\Users\adire\TAJuaraCoding\src\test\java\com\juaracoding\tajuaracoding\BaseTest.java
 C:\Users\adire\TAJuaraCoding\src\test\java\com\juaracoding\tajuaracoding\Dashboard\DashboardTest.java
+C:\Users\adire\TAJuaraCoding\src\test\java\com\juaracoding\tajuaracoding\Dashboard\PendingDashboardTest.java
+C:\Users\adire\TAJuaraCoding\src\test\java\com\juaracoding\tajuaracoding\laporan\IzinPulangCepatTest.java
 C:\Users\adire\TAJuaraCoding\src\test\java\com\juaracoding\tajuaracoding\laporan\IzinTerlambatTest.java
+C:\Users\adire\TAJuaraCoding\src\test\java\com\juaracoding\tajuaracoding\laporan\KehadiranTest.java
+C:\Users\adire\TAJuaraCoding\src\test\java\com\juaracoding\tajuaracoding\laporan\SemuaTest.java
 C:\Users\adire\TAJuaraCoding\src\test\java\com\juaracoding\tajuaracoding\login\NegativeLoginTest.java
 C:\Users\adire\TAJuaraCoding\src\test\java\com\juaracoding\tajuaracoding\login\PositiveLoginTest.java
