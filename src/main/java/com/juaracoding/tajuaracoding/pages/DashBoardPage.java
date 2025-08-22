@@ -18,6 +18,8 @@ import java.util.stream.Collectors;
 
 public class DashBoardPage {
     private WebDriver driver;
+    private WebDriverWait wait;
+
 
     // Locator Dashboard
     public By TotalKaryawan = By.xpath("//*[@id=\"__next\"]/div/div/div/div[1]/div/div[1]/div/div[2]/div[1]/p");
@@ -30,14 +32,21 @@ public class DashBoardPage {
     // Locator Pending Dashboard
     public By searchButton = By.xpath("//*[@id=\"__next\"]/div/div/div/div[1]/div/div/div[1]/div/form/div/div[4]/button");
     public By resetButton = By.xpath("//button[normalize-space()='Reset']");
-    private By calendarIcon = By.xpath("//button//*[local-name()='svg' and contains(@class,'feather-calendar')]");
-    private By dateButtons = By.xpath("//button[contains(@class, 'rdrDay') and not(contains(@tabindex, '-1'))]");
-    private By startDateInput = By.xpath("(//input[@placeholder='Start Date'])[1]");
-    private By endDateInput = By.xpath("(//input[@placeholder='End Date'])[1]");
-    private By saveButton = By.xpath("(//button[normalize-space()='save'])[1]");
-    private By cancelButtonCalendar = By.xpath("(//button[normalize-space()='cancel'])[1]");
-    private By dataRows = By.xpath("//tbody/tr");
+    public By calendarIcon = By.xpath("//button//*[local-name()='svg' and contains(@class,'feather-calendar')]");
+    public By dateButtons = By.xpath("//button[contains(@class, 'rdrDay') and not(contains(@tabindex, '-1'))]");
+    public By startDateInput = By.xpath("(//input[@placeholder='Start Date'])[1]");
+    public By endDateInput = By.xpath("(//input[@placeholder='End Date'])[1]");
+    public By saveButton = By.xpath("(//button[normalize-space()='save'])[1]");
+    public By cancelButtonCalendar = By.xpath("(//button[normalize-space()='cancel'])[1]");
+    public By dataRows = By.xpath("//tbody/tr");
     public By filterByModal = By.xpath("/html/body/div[3]/div[3]/div");
+    public By monthDropdown = By.xpath("//span[@class='rdrMonthPicker']//select");
+    public By yearDropdown = By.xpath("//span[@class='rdrYearPicker']//select");
+
+    // Locator Pending Dashboard Validator 1
+    public By v1search = By.xpath("//*[@id=\"search\"]");
+    public By v1buttonsearch = By.xpath("//*[@id=\"__next\"]/div/div/div/div[1]/div/div[1]/div/div[1]/div[2]/div/button[2]");
+    public By v1buttonreset  = By.xpath("//*[@id=\"__next\"]/div/div/div/div[1]/div/div[1]/div/div[1]/div[2]/div/button[1]");
 
 
     // Icon Red Filter
@@ -47,7 +56,11 @@ public class DashBoardPage {
     public By cancelButton = By.xpath("(//button[normalize-space()='Batal'])[1]");
     public By dataNotFoundMessage = By.xpath("//p[contains(text(), 'Data tidak ditemukan')]");
 
+
     // Tabel Validator
+    @FindBy(xpath = "//*[@id=\"__next\"]/div/div/div/div[1]/div/div[1]/div/div[2]/div/table/tbody")
+    public List<WebElement> v1data;
+
     // -----Validator 1-------
     // Cuti
     @FindBy(xpath = "(//h2[contains(text(),'Validator 1')]/following::table[@aria-label='simple table'])[1]//tbody/tr")
@@ -61,7 +74,7 @@ public class DashBoardPage {
     @FindBy(xpath = "(//h2[contains(text(),'Validator 1')]/following::table[@aria-label='simple table'])[3]//tbody/tr")
     public List<WebElement> validator1Koreksi;
 
-    // -----Validator 1-------
+    // -----Validator 2-------
     // Cuti
     @FindBy(xpath = "(//h2[contains(text(),'Validator 2')]/following::table[@aria-label='simple table'])[1]//tbody/tr")
     public List<WebElement> validator2Cuti;
@@ -74,6 +87,7 @@ public class DashBoardPage {
     @FindBy(xpath = "(//h2[contains(text(),'Validator 2')]/following::table[@aria-label='simple table'])[3]//tbody/tr")
     public List<WebElement> validator2Koreksi;
 
+    // -----Validator 3-------
     // Cuti
     @FindBy(xpath = "(//h2[contains(text(),'Validator 3')]/following::table[@aria-label='simple table'])[1]//tbody/tr")
     public List<WebElement> validator3Cuti;
@@ -207,5 +221,63 @@ public class DashBoardPage {
         DriverUtil.getDriver().findElement(applyButton).click();
     }
 
+    public String getMonthText() {
+        WebElement dropdown = DriverUtil.getDriver().findElement(monthDropdown);
+        Select select = new Select(dropdown);
+        return select.getFirstSelectedOption().getText();
+    }
+
+    public void selectMonth(String month) {
+        WebElement dropdown = driver.findElement(monthDropdown);
+        Select select = new Select(dropdown);
+        select.selectByVisibleText(month);
+    }
+
+    public void clickReset(){
+        DriverUtil.getDriver().findElement(resetButton).click();
+    }
+
+    public void clickCancel(){
+        DriverUtil.getDriver().findElement(cancelButton).click();
+    }
+
+    public String getYearText(){
+        WebElement droprown = DriverUtil.getDriver().findElement(yearDropdown);
+        Select select = new Select(droprown);
+        return select.getFirstSelectedOption().getText();
+    }
+
+    public void selectYear(String year){
+        WebElement dropdown = driver.findElement(yearDropdown);
+        Select select = new Select(dropdown);
+        select.selectByVisibleText(year);
+    }
+
+    public void v1search(String value) {
+        WebElement input = driver.findElement(v1search);
+        input.clear();
+        input.sendKeys(value);
+        driver.findElement(v1buttonsearch).click();
+    }
+
+    public void v1resetbutton(){
+        DriverUtil.getDriver().findElement(v1buttonreset).click();
+    }
+
+    public List < String > getUserNameList() {
+        return driver.findElements(By.xpath("//table//tbody//tr//td[1]")).stream().map(WebElement::getText).collect(Collectors.toList());
+    }
+
+    public boolean isDataNotFoundMessageDisplayed() {
+        try {
+            return driver.findElement(dataNotFoundMessage).isDisplayed();
+        } catch (org.openqa.selenium.NoSuchElementException e) {
+            return false;
+        }
+    }
+
+    public List < WebElement > getDataList() {
+        return DriverUtil.getDriver().findElements(dataRows);
+    }
 
 }

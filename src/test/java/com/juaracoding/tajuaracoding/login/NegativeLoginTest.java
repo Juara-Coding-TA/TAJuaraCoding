@@ -2,6 +2,7 @@ package com.juaracoding.tajuaracoding.login;
 
 import com.juaracoding.tajuaracoding.pages.LoginPage;
 import com.juaracoding.tajuaracoding.utils.DriverUtil;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -13,14 +14,21 @@ public class NegativeLoginTest {
         // Langsung pakai loginPage dari BaseTest
         loginPage.openLoginPage();
 
-        loginPage.inputUsername("admin123@gmail.com");
+        loginPage.inputUsername("adminhadir.com");
         loginPage.inputPassword("MagangSQA_JC@123");
         loginPage.clickButton();
 
+        WebElement username = DriverUtil.getDriver().findElement(loginPage.emailField);
+        String validationMessage = username.getAttribute("validationMessage");
         String actual = loginPage.getErrorMessage();
-        System.out.println(actual);
-        Assert.assertEquals(actual, "Akun tidak ditemukan");
 
+        if(validationMessage != null && !validationMessage.isEmpty()) {
+            System.out.println(validationMessage);
+            Assert.assertEquals(validationMessage, "Please enter an email address.");
+        } else {
+            System.out.println(actual);
+            Assert.assertEquals(actual, "Akun tidak ditemukan");
+        }
         String currentUrl = loginPage.getCurrentUrl();
         System.out.println("Current URL: " + currentUrl);
     }
