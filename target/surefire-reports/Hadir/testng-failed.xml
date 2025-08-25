@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Hadir]" guice-stage="DEVELOPMENT" verbose="0">
+  <parameter name="baseURL" value="https://magang.dikahadir.com/authentication/login"/>
+  <parameter name="password" value="MagangSQA_JC@123"/>
+  <parameter name="username" value="admin@hadir.com"/>
+  <test thread-count="5" name="Laporan Tests(failed)" verbose="0">
+    <classes>
+      <class name="com.juaracoding.tajuaracoding.laporan.IzinPulangCepatTest">
+        <methods>
+          <include name="teardown"/>
+          <include name="testNegativeUnitFilter"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.juaracoding.tajuaracoding.laporan.IzinPulangCepatTest -->
+      <class name="com.juaracoding.tajuaracoding.laporan.IzinTerlambatTest">
+        <methods>
+          <include name="teardown"/>
+          <include name="testNegativeUnitFilter"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.juaracoding.tajuaracoding.laporan.IzinTerlambatTest -->
+      <class name="com.juaracoding.tajuaracoding.laporan.CutiTest">
+        <methods>
+          <include name="testNegativeUnitFilter"/>
+          <include name="teardown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.juaracoding.tajuaracoding.laporan.CutiTest -->
+    </classes>
+  </test> <!-- Laporan Tests(failed) -->
+</suite> <!-- Failed suite [Hadir] -->
