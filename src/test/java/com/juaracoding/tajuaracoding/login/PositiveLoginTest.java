@@ -8,7 +8,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.juaracoding.tajuaracoding.BaseTest;
-import com.juaracoding.tajuaracoding.pages.LoginPage;
+import com.juaracoding.tajuaracoding.pages.login.LoginPage;
 import com.juaracoding.tajuaracoding.utils.DriverUtil;
 
 public class PositiveLoginTest extends BaseTest {
