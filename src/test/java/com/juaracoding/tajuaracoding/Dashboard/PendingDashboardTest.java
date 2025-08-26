@@ -161,7 +161,7 @@ public class PendingDashboardTest extends BaseTest {
     }
 
     // ERROR 404
-    @Test(enabled = false)
+    @Test(enabled = true)
     public void validator1koreksiTest() throws InterruptedException {
         dashBoardPage = new DashBoardPage(DriverUtil.getDriver());
         Thread.sleep(2000);
@@ -520,6 +520,69 @@ public class PendingDashboardTest extends BaseTest {
         Thread.sleep(2000);
         Assert.assertEquals(DriverUtil.getDriver().findElements(dashBoardPage.v1search).isEmpty(),false,"Field search muncul");
         Assert.assertTrue(dashBoardPage.getDataCutiList("Hadir SQA Testing 2"),"Data tidak muncul");
+        String data = dashBoardPage.v1data.getFirst().getText();
+        System.out.println(data);
+    }
+
+    // Error 404
+    // V1-Koreksi
+    @Test(enabled = true)
+    public void Positive_v1koreksisearchTest() throws InterruptedException {
+        dashBoardPage = new DashBoardPage(DriverUtil.getDriver());
+        Thread.sleep(2000);
+        String keyword = "Hadir";
+        dashBoardPage.clickuplinerkoreksi("Hadir SQA Testing 2");
+        wait.until(ExpectedConditions.visibilityOfElementLocated(dashBoardPage.v1search));
+        dashBoardPage.v1search(keyword);
+        Assert.assertTrue(dashBoardPage.getCurrentUrl().contains("v1-koreksi"), "URL halaman tidak sesuai!");
+        System.out.println(dashBoardPage.getCurrentUrl());
+        Thread.sleep(3000);
+        List<String> username = dashBoardPage.getUserNameList();
+        Assert.assertTrue(username.getFirst().contains(keyword), "User '" + keyword + "' not found");
+    }
+
+    @Test(enabled = true)
+    public void Negative_v1koreksisearchTest() throws InterruptedException {
+        dashBoardPage = new DashBoardPage(DriverUtil.getDriver());
+        Thread.sleep(2000);
+        String keyword = "Miku";
+        dashBoardPage.clickuplinerkoreksi("Hadir SQA Testing 2");
+        wait.until(ExpectedConditions.visibilityOfElementLocated(dashBoardPage.v1search));
+        dashBoardPage.v1search(keyword);
+        Assert.assertTrue(dashBoardPage.getCurrentUrl().contains("v1-koreksi"),"URL halaman tidak sesuai!");
+        System.out.println(dashBoardPage.getCurrentUrl());
+        Thread.sleep(3000);
+        boolean dataNotFound = dashBoardPage.isDataNotFoundMessageDisplayed();
+        boolean isUserListEmpty = dashBoardPage.getUserNameList().isEmpty();
+        Assert.assertTrue(dataNotFound || isUserListEmpty,"Expected 'Data tidak ditemukan' message or empty table, but found otherwise.");
+        String data = dashBoardPage.v1data.getFirst().getText();
+        System.out.println(data);
+    }
+
+    @Test(enabled = true)
+    public void reset_v1koreksisearchTest() throws InterruptedException {
+        // Validasi sebelum reset
+        dashBoardPage = new DashBoardPage(DriverUtil.getDriver());
+        Thread.sleep(2000);
+        String keyword = "Miku";
+        dashBoardPage.clickuplinerkoreksi("Hadir SQA Testing 2");
+        Assert.assertTrue(dashBoardPage.getDataKoreksiList("Hadir SQA Testing 2"),"Data tidak muncul");
+        wait.until(ExpectedConditions.visibilityOfElementLocated(dashBoardPage.v1search));
+        dashBoardPage.v1search(keyword);
+        Assert.assertTrue(dashBoardPage.getCurrentUrl().contains("v1-koreksi"),"URL halaman tidak sesuai!");
+        System.out.println(dashBoardPage.getCurrentUrl());
+        Thread.sleep(2000);
+
+        // Validasi User Invalid
+        boolean dataNotFound = dashBoardPage.isDataNotFoundMessageDisplayed();
+        boolean isUserListEmpty = dashBoardPage.getUserNameList().isEmpty();
+        Assert.assertTrue(dataNotFound || isUserListEmpty,"Expected 'Data tidak ditemukan' message or empty table, but found otherwise.");
+
+        // Validasi Setelah reset
+        wait.until(ExpectedConditions.elementToBeClickable(dashBoardPage.v1buttonreset)).click();
+        Thread.sleep(2000);
+        Assert.assertEquals(DriverUtil.getDriver().findElements(dashBoardPage.v1search).isEmpty(),false,"Field search muncul");
+        Assert.assertTrue(dashBoardPage.getDataKoreksiList("Hadir SQA Testing 2"),"Data tidak muncul");
         String data = dashBoardPage.v1data.getFirst().getText();
         System.out.println(data);
     }
