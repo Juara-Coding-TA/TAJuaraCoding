@@ -64,46 +64,21 @@ public class CompositeActionBuilder {
         return this;
     }
 
-    // Add these methods to your existing CompositeActionBuilder class
-
-    /**
-     * Filter cuti by unit with smart handling for cases where unit doesn't appear in table
-     * @param unitName Name of the unit to filter by
-     * @param expectResults Whether to expect results (true) or no results (false)
-     * @return CompositeActionBuilder for method chaining
-     */
     public CompositeActionBuilder filterCutiByUnit(String unitName, boolean expectResults) {
         actions.add(new CutiFilterAction(unitName, expectResults));
         return this;
     }
 
-    /**
-     * Filter cuti by unit (expecting results by default)
-     * @param unitName Name of the unit to filter by
-     * @return CompositeActionBuilder for method chaining  
-     */
     public CompositeActionBuilder filterCutiByUnit(String unitName) {
         actions.add(new CutiFilterAction(unitName, true));
         return this;
     }
 
-    /**
-     * Filter cuti by unit and validate no results expected
-     * @param unitName Name of the unit to filter by
-     * @return CompositeActionBuilder for method chaining
-     */
     public CompositeActionBuilder filterCutiByUnitExpectEmpty(String unitName) {
         actions.add(new CutiFilterAction(unitName, false));
         return this;
     }
 
-    /**
-     * Custom action for advanced cuti filtering with callback
-     * @param unitName Name of the unit
-     * @param expectResults Whether to expect results
-     * @param callback Custom validation callback after filter
-     * @return CompositeActionBuilder for method chaining
-     */
     public CompositeActionBuilder filterCutiByUnitWithValidation(String unitName, boolean expectResults, 
                                                                 java.util.function.Consumer<CutiFilterAction> callback) {
         actions.add(new CompositeAction() {
@@ -112,7 +87,6 @@ public class CompositeActionBuilder {
                 CutiFilterAction cutiFilter = new CutiFilterAction(unitName, expectResults);
                 cutiFilter.execute();
                 
-                // Run custom validation
                 if (callback != null) {
                     callback.accept(cutiFilter);
                 }
