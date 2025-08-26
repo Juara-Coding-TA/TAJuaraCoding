@@ -6,29 +6,28 @@ import com.juaracoding.tajuaracoding.BaseTest;
 import com.juaracoding.tajuaracoding.pages.actions.CompositeActionBuilder;
 import com.juaracoding.tajuaracoding.pages.actions.TotalDataAction;
 
-
-public class IzinTerlambatTest extends BaseTest {
+public class CutiTest extends BaseTest {
 
     @Test(enabled = true)
     public void testIzinTerlambatPageVerification() {
         new CompositeActionBuilder()
-            .navigateTo("izin-terlambat")
-            .verifyPage("izin-terlambat", "search-field", "search-button", "reset-button", "filter-button")
+            .navigateTo("cuti")
+            .verifyPage("cuti", "search-field", "search-button", "reset-button", "filter-button")
             .execute();
     }
-        
+    
     @Test(enabled = true)
     public void testPositiveSearch() {
         new CompositeActionBuilder()
-            .navigateTo("izin-terlambat")
-            .search("Ahlan Rezki", true)
+            .navigateTo("cuti")
+            .search("ADITYA RIDWAN NUGRAHA", true)
             .execute();
     }
     
     @Test(enabled = true)
     public void testNegativeSearch() {
         new CompositeActionBuilder()
-            .navigateTo("izin-terlambat")
+            .navigateTo("cuti")
             .search("UserTidakAda123", false)
             .execute();
     }
@@ -37,11 +36,11 @@ public class IzinTerlambatTest extends BaseTest {
     public void testDateRangeFilter() {
         TotalDataAction.clearGlobalDataStore();
         new CompositeActionBuilder()
-            .navigateTo("izin-terlambat")
-            .captureDataBefore("data")
+            .navigateTo("cuti")
+            .captureDataBefore("cuti-data")
             .filterByDate("", 0, 14, "01 Agt 2025", "15 Agt 2025")
-            .captureDataAfter("data")
-            .validateFilterReduction("data")
+            .captureDataAfter("cuti-data")
+            .validateFilterReduction("cuti-data")
             .execute();
     }
     
@@ -49,19 +48,19 @@ public class IzinTerlambatTest extends BaseTest {
     public void testPositiveUnitFilter() {
         TotalDataAction.clearGlobalDataStore();
         new CompositeActionBuilder()
-            .navigateTo("izin-terlambat")
-            .captureDataBefore("data")
-            .filterByUnit("Sysmex", true)
-            .captureDataAfter("data")
-            .validateFilterReduction("data")
+            .navigateTo("cuti")
+            .captureDataBefore("cuti-data")
+            .filterCutiByUnit("Sysmex", true)  // Expect results
+            .captureDataAfter("cuti-data")
+            .validateFilterReduction("cuti-data")
             .execute();
     }
     
     @Test(enabled = true)
     public void testNegativeUnitFilter() {
         new CompositeActionBuilder()
-            .navigateTo("izin-terlambat")
-            .filterByUnit("UnitTidakAda", false)
+            .navigateTo("cuti")
+            .filterCutiByUnit("UnitTidakAda", false)
             .execute();
     }
     
@@ -69,21 +68,20 @@ public class IzinTerlambatTest extends BaseTest {
     public void testCombinationFilter() {
         TotalDataAction.clearGlobalDataStore();
         new CompositeActionBuilder()
-            .navigateTo("izin-terlambat")
-            .captureDataBefore("data")
+            .navigateTo("cuti")
+            .captureDataBefore("cuti-data")
             .search("Hadir", true)
             .filterByDate("June", 0, 29, "01 Jun 2025", "30 Jun 2025")
-            .filterByUnit("Sysmex", true)
-            .captureDataAfter("data")          
-            .validateFilterReduction("data")    
+            .filterCutiByUnit("Sysmex", true)
+            .captureDataAfter("cuti-data")
+            .validateFilterReduction("cuti-data")
             .execute();
     }
-    
     
     @Test(enabled = true)
     public void testResetAllFilters() {
         new CompositeActionBuilder()
-            .navigateTo("izin-terlambat")
+            .navigateTo("cuti")
             .search("Hadir", true)
             .filterByDate("February", 0, 27, "01 Feb 2025", "28 Feb 2025")
             .filterCutiByUnit("Sysmex", true)
@@ -94,8 +92,17 @@ public class IzinTerlambatTest extends BaseTest {
     @Test(enabled = true)
     public void testCheckSpecificStatuses() {
         new CompositeActionBuilder()
-            .navigateTo("izin-terlambat")
-            .statusCheckAction("PENDING", "APPROVED", "REJECT")
+            .navigateTo("cuti")
+            .statusCheckAction(
+                "Pending",
+                "APPROVED",
+                "Menunggu Approval V1",
+                "Menunggu Approval V2",
+                "Menunggu Approval V3",
+                "Dibatalkan",
+                "Rejected V1"
+            )
             .execute();
     }
+
 }

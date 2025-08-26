@@ -1,0 +1,10 @@
+com\juaracoding\tajuaracoding\Dashboard\DashboardTest.class
+com\juaracoding\tajuaracoding\laporan\IzinTerlambatTest.class
+com\juaracoding\tajuaracoding\Dashboard\PendingDashboardTest.class
+com\juaracoding\tajuaracoding\BaseTest.class
+com\juaracoding\tajuaracoding\login\PositiveLoginTest.class
+com\juaracoding\tajuaracoding\login\NegativeLoginTest.class
+com\juaracoding\tajuaracoding\laporan\KehadiranTest.class
+com\juaracoding\tajuaracoding\laporan\CutiTest.class
+com\juaracoding\tajuaracoding\laporan\IzinPulangCepatTest.class
+com\juaracoding\tajuaracoding\laporan\SemuaTest.class
