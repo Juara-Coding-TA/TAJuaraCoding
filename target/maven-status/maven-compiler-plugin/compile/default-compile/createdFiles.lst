@@ -1,9 +1,0 @@
-com\juaracoding\tajuaracoding\pages\laporan\BaseLaporanPage.class
-com\juaracoding\tajuaracoding\pages\laporan\IzinTerlambatPage.class
-com\juaracoding\tajuaracoding\pages\DashBoardPage.class
-com\juaracoding\tajuaracoding\pages\laporan\IzinPulangCepatPage.class
-com\juaracoding\tajuaracoding\pages\components\Navbar.class
-com\juaracoding\tajuaracoding\pages\LoginPage.class
-com\juaracoding\tajuaracoding\pages\laporan\KehadiranPage.class
-com\juaracoding\tajuaracoding\utils\DriverUtil.class
-com\juaracoding\tajuaracoding\pages\laporan\SemuaPage.class
