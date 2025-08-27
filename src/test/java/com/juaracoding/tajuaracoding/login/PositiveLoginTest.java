@@ -17,6 +17,7 @@ public class PositiveLoginTest {
         LoginPage loginPage = new LoginPage(DriverUtil.getDriver());
 
         // Input username & password
+        loginPage.openLoginPage();
         loginPage.inputUsername("admin@hadir.com");
         loginPage.inputPassword("MagangSQA_JC@123");
 
