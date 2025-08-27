@@ -16,6 +16,8 @@ public class PositiveLoginTest {
     public void testLogin() throws InterruptedException {
         LoginPage loginPage = new LoginPage(DriverUtil.getDriver());
 
+        loginPage.openLoginPage();
+
         // Input username & password
         loginPage.inputUsername("admin@hadir.com");
         loginPage.inputPassword("MagangSQA_JC@123");
