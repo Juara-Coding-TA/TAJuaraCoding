@@ -103,12 +103,11 @@ public class KehadiranTest extends BaseTest {
             .navigateTo("Kehadiran")
             .captureDataBefore("data")
             .filterByDate("", 7, 21, "08 Agt 2025", "22 Agt 2025")
-            .filterByUnit("Sysmex", true)
+            .filterCutiByUnit("Sysmex", true)
             .search("Testing", true)
             .captureDataAfter("data")
             .validateFilterReduction("data")
             .exportCancel()
-            .sleep(2000) //delay 2 detik
             .execute();
     }
 
@@ -120,9 +119,8 @@ public class KehadiranTest extends BaseTest {
             .search("SQA", true)
             .exportCancel()
             .resetFilters()
-            .sleep(2000) //delay 2 detik    
             .execute();
-}
+    }
 
     @Test(enabled = true, dependsOnMethods = {"testResetAllFilters"})
     public void testExportFunctionality() {
@@ -141,7 +139,7 @@ public class KehadiranTest extends BaseTest {
             .navigateTo("Kehadiran")
             .filterByDate("May", 0, 30, "01 Mei 2025", "31 Mei 2025")
             .sleep(2000) //delay 2 detik
-            .statusCheckAction("Work From Office")
+            .statusCheckAction("Work From Office", "Work From Home")
             .execute();
     }
 }

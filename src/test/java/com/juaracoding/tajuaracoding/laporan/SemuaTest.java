@@ -81,7 +81,7 @@ public class SemuaTest extends BaseTest {
             .navigateTo("Semua")
             .sleep(2000) // delay 2 detik
             .filterByDate("", 7, 21, "08 Agt 2025", "22 Agt 2025")
-            .filterByUnit("Sysmex", true)
+            .filterCutiByUnit("Sysmex", true)
             .sleep(2000) // delay 2 detik
             .search("Testing", true)
             .execute();
@@ -92,9 +92,7 @@ public class SemuaTest extends BaseTest {
         new CompositeActionBuilder()
             .navigateTo("Semua")
             .filterByDate("", 7, 21, "08 Agt 2025", "22 Agt 2025")
-            .sleep(2000) // delay 2 detik
-            .filterByUnit("Sysmex", true)
-            .sleep(2000) // delay 2 detik
+            .filterCutiByUnit("Sysmex", true)
             .search("Testing", true)
             .resetFilters()
             .execute();

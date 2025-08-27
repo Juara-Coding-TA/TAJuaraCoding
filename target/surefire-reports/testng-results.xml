@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="43" total="51" passed="7" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-08-27T21:07:23 WIB" name="Hadir" finished-at="2025-08-27T21:12:10 WIB" duration-ms="286738">
+    <groups>
+    </groups>
+    <test started-at="2025-08-27T21:07:23 WIB" name="Login Tests" finished-at="2025-08-27T21:07:23 WIB" duration-ms="21">
+    </test> <!-- Login Tests -->
+    <test started-at="2025-08-27T21:07:23 WIB" name="Laporan Tests" finished-at="2025-08-27T21:12:10 WIB" duration-ms="286657">
+      <class name="com.juaracoding.tajuaracoding.laporan.SemuaTest">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.juaracoding.tajuaracoding.laporan.SemuaTest@459e9125]" started-at="2025-08-27T21:07:23 WIB" name="setup" finished-at="2025-08-27T21:07:29 WIB" duration-ms="6299" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://magang.dikahadir.com/authentication/login]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin@hadir.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[MagangSQA_JC@123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testPositiveUnitFilterWithDateRangeFilter()[pri:8, instance:com.juaracoding.tajuaracoding.laporan.SemuaTest@459e9125]" started-at="2025-08-27T21:07:29 WIB" name="testPositiveUnitFilterWithDateRangeFilter" finished-at="2025-08-27T21:07:45 WIB" duration-ms="15416" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPositiveUnitFilterWithDateRangeFilter -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.juaracoding.tajuaracoding.laporan.SemuaTest@459e9125]" started-at="2025-08-27T21:07:45 WIB" name="teardown" finished-at="2025-08-27T21:07:46 WIB" duration-ms="1663" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.juaracoding.tajuaracoding.laporan.SemuaTest@459e9125]" started-at="2025-08-27T21:07:46 WIB" name="setup" finished-at="2025-08-27T21:07:51 WIB" duration-ms="4907" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://magang.dikahadir.com/authentication/login]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin@hadir.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[MagangSQA_JC@123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testResetAllFilters()[pri:10, instance:com.juaracoding.tajuaracoding.laporan.SemuaTest@459e9125]" started-at="2025-08-27T21:07:51 WIB" name="testResetAllFilters" finished-at="2025-08-27T21:08:11 WIB" duration-ms="19369" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Unit Name masih ada value setelah reset: Sysmex expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Unit Name masih ada value setelah reset: Sysmex expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at com.juaracoding.tajuaracoding.pages.actions.ResetFilterAction.execute(ResetFilterAction.java:41)
+at com.juaracoding.tajuaracoding.pages.actions.CompositeActionBuilder.execute(CompositeActionBuilder.java:110)
+at com.juaracoding.tajuaracoding.laporan.SemuaTest.testResetAllFilters(SemuaTest.java:98)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testResetAllFilters -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.juaracoding.tajuaracoding.laporan.SemuaTest@459e9125]" started-at="2025-08-27T21:08:11 WIB" name="teardown" finished-at="2025-08-27T21:08:12 WIB" duration-ms="1681" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.juaracoding.tajuaracoding.laporan.SemuaTest@459e9125]" started-at="2025-08-27T21:08:12 WIB" name="setup" finished-at="2025-08-27T21:08:17 WIB" duration-ms="4152" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://magang.dikahadir.com/authentication/login]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin@hadir.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[MagangSQA_JC@123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testStatusCheck()[pri:11, instance:com.juaracoding.tajuaracoding.laporan.SemuaTest@459e9125]" started-at="2025-08-27T21:08:17 WIB" name="testStatusCheck" finished-at="2025-08-27T21:08:32 WIB" duration-ms="15891" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testStatusCheck -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.juaracoding.tajuaracoding.laporan.SemuaTest@459e9125]" started-at="2025-08-27T21:08:32 WIB" name="teardown" finished-at="2025-08-27T21:08:34 WIB" duration-ms="1672" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.juaracoding.tajuaracoding.laporan.SemuaTest -->
+      <class name="com.juaracoding.tajuaracoding.laporan.CutiTest">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.juaracoding.tajuaracoding.laporan.CutiTest@6a6cb05c]" started-at="2025-08-27T21:11:31 WIB" name="setup" finished-at="2025-08-27T21:11:36 WIB" duration-ms="4884" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://magang.dikahadir.com/authentication/login]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin@hadir.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[MagangSQA_JC@123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testCheckSpecificStatuses()[pri:0, instance:com.juaracoding.tajuaracoding.laporan.CutiTest@6a6cb05c]" started-at="2025-08-27T21:11:36 WIB" name="testCheckSpecificStatuses" finished-at="2025-08-27T21:12:08 WIB" duration-ms="32362" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCheckSpecificStatuses -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.juaracoding.tajuaracoding.laporan.CutiTest@6a6cb05c]" started-at="2025-08-27T21:12:08 WIB" name="teardown" finished-at="2025-08-27T21:12:10 WIB" duration-ms="1685" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.juaracoding.tajuaracoding.laporan.CutiTest -->
+      <class name="com.juaracoding.tajuaracoding.laporan.IzinTerlambatTest">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.juaracoding.tajuaracoding.laporan.IzinTerlambatTest@43bc63a3]" started-at="2025-08-27T21:09:00 WIB" name="setup" finished-at="2025-08-27T21:10:14 WIB" duration-ms="74337" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://magang.dikahadir.com/authentication/login]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin@hadir.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[MagangSQA_JC@123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testCheckSpecificStatuses()[pri:0, instance:com.juaracoding.tajuaracoding.laporan.IzinTerlambatTest@43bc63a3]" started-at="2025-08-27T21:10:14 WIB" name="testCheckSpecificStatuses" finished-at="2025-08-27T21:10:33 WIB" duration-ms="18808" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCheckSpecificStatuses -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.juaracoding.tajuaracoding.laporan.IzinTerlambatTest@43bc63a3]" started-at="2025-08-27T21:10:33 WIB" name="teardown" finished-at="2025-08-27T21:10:34 WIB" duration-ms="1734" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.juaracoding.tajuaracoding.laporan.IzinTerlambatTest@43bc63a3]" started-at="2025-08-27T21:10:34 WIB" name="setup" finished-at="2025-08-27T21:10:40 WIB" duration-ms="5834" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://magang.dikahadir.com/authentication/login]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin@hadir.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[MagangSQA_JC@123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testResetAllFilters()[pri:0, instance:com.juaracoding.tajuaracoding.laporan.IzinTerlambatTest@43bc63a3]" started-at="2025-08-27T21:10:40 WIB" name="testResetAllFilters" finished-at="2025-08-27T21:10:59 WIB" duration-ms="18883" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testResetAllFilters -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.juaracoding.tajuaracoding.laporan.IzinTerlambatTest@43bc63a3]" started-at="2025-08-27T21:10:59 WIB" name="teardown" finished-at="2025-08-27T21:11:01 WIB" duration-ms="1699" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.juaracoding.tajuaracoding.laporan.IzinTerlambatTest -->
+      <class name="com.juaracoding.tajuaracoding.laporan.IzinPulangCepatTest">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.juaracoding.tajuaracoding.laporan.IzinPulangCepatTest@702657cc]" started-at="2025-08-27T21:11:01 WIB" name="setup" finished-at="2025-08-27T21:11:05 WIB" duration-ms="3979" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://magang.dikahadir.com/authentication/login]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin@hadir.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[MagangSQA_JC@123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testCheckSpecificStatuses()[pri:0, instance:com.juaracoding.tajuaracoding.laporan.IzinPulangCepatTest@702657cc]" started-at="2025-08-27T21:11:05 WIB" name="testCheckSpecificStatuses" finished-at="2025-08-27T21:11:29 WIB" duration-ms="24223" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCheckSpecificStatuses -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.juaracoding.tajuaracoding.laporan.IzinPulangCepatTest@702657cc]" started-at="2025-08-27T21:11:29 WIB" name="teardown" finished-at="2025-08-27T21:11:31 WIB" duration-ms="1659" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.juaracoding.tajuaracoding.laporan.IzinPulangCepatTest -->
+      <class name="com.juaracoding.tajuaracoding.laporan.KehadiranTest">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.juaracoding.tajuaracoding.laporan.KehadiranTest@38425407]" started-at="2025-08-27T21:08:34 WIB" name="setup" finished-at="2025-08-27T21:08:41 WIB" duration-ms="7142" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://magang.dikahadir.com/authentication/login]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin@hadir.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[MagangSQA_JC@123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testPositiveUnitFilterWithDateRangeFilter()[pri:8, instance:com.juaracoding.tajuaracoding.laporan.KehadiranTest@38425407]" started-at="2025-08-27T21:08:41 WIB" name="testPositiveUnitFilterWithDateRangeFilter" finished-at="2025-08-27T21:08:58 WIB" duration-ms="16644" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPositiveUnitFilterWithDateRangeFilter -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.juaracoding.tajuaracoding.laporan.KehadiranTest@38425407]" started-at="2025-08-27T21:08:58 WIB" name="teardown" finished-at="2025-08-27T21:09:00 WIB" duration-ms="1683" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.juaracoding.tajuaracoding.laporan.KehadiranTest -->
+    </test> <!-- Laporan Tests -->
+    <test started-at="2025-08-27T21:12:10 WIB" name="Dashboard Tests" finished-at="2025-08-27T21:12:10 WIB" duration-ms="0">
+    </test> <!-- Dashboard Tests -->
+  </suite> <!-- Hadir -->
+</testng-results>
