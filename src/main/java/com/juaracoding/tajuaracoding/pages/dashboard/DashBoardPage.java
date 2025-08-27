@@ -41,6 +41,7 @@ public class DashBoardPage {
     public By filterByModal = By.xpath("/html/body/div[3]/div[3]/div");
     public By monthDropdown = By.xpath("//span[@class='rdrMonthPicker']//select");
     public By yearDropdown = By.xpath("//span[@class='rdrYearPicker']//select");
+    public By errortext    = By.xpath("//*[contains(text(),'This page could not be found.')]");
 
     // Locator Pending Dashboard Validator 1
     public By v1search = By.xpath("//*[@id=\"search\"]");

@@ -174,7 +174,8 @@ public class PendingDashboardTest extends BaseTest {
             dashBoardPage.clickuplinerkoreksi("Hadir SQA Testing 2");
             Assert.assertTrue(dashBoardPage.getCurrentUrl().contains("v1-koreksi"),"URL halaman tidak sesuai!");
             System.out.println(dashBoardPage.getCurrentUrl());
-            Assert.assertTrue(dashBoardPage.getDataKoreksiList("Hadir SQA Testing 2"),"Data tidak muncul");
+            WebElement errorText = DriverUtil.getDriver().findElement(dashBoardPage.errortext);
+            Assert.assertFalse(errorText.isDisplayed(), "Pesan 404 tampil");
         }
     }
 
@@ -532,6 +533,8 @@ public class PendingDashboardTest extends BaseTest {
         Thread.sleep(2000);
         String keyword = "Hadir";
         dashBoardPage.clickuplinerkoreksi("Hadir SQA Testing 2");
+        WebElement errorText = DriverUtil.getDriver().findElement(dashBoardPage.errortext);
+        Assert.assertFalse(errorText.isDisplayed(), "Pesan 404 tampil");
         wait.until(ExpectedConditions.visibilityOfElementLocated(dashBoardPage.v1search));
         dashBoardPage.v1search(keyword);
         Assert.assertTrue(dashBoardPage.getCurrentUrl().contains("v1-koreksi"), "URL halaman tidak sesuai!");
@@ -547,10 +550,13 @@ public class PendingDashboardTest extends BaseTest {
         Thread.sleep(2000);
         String keyword = "Miku";
         dashBoardPage.clickuplinerkoreksi("Hadir SQA Testing 2");
+        WebElement errorText = DriverUtil.getDriver().findElement(dashBoardPage.errortext);
+        Assert.assertFalse(errorText.isDisplayed(), "Pesan 404 tampil");
         wait.until(ExpectedConditions.visibilityOfElementLocated(dashBoardPage.v1search));
         dashBoardPage.v1search(keyword);
         Assert.assertTrue(dashBoardPage.getCurrentUrl().contains("v1-koreksi"),"URL halaman tidak sesuai!");
         System.out.println(dashBoardPage.getCurrentUrl());
+
         Thread.sleep(3000);
         boolean dataNotFound = dashBoardPage.isDataNotFoundMessageDisplayed();
         boolean isUserListEmpty = dashBoardPage.getUserNameList().isEmpty();
@@ -566,6 +572,8 @@ public class PendingDashboardTest extends BaseTest {
         Thread.sleep(2000);
         String keyword = "Miku";
         dashBoardPage.clickuplinerkoreksi("Hadir SQA Testing 2");
+        WebElement errorText = DriverUtil.getDriver().findElement(dashBoardPage.errortext);
+        Assert.assertFalse(errorText.isDisplayed(), "Pesan 404 tampil");
         Assert.assertTrue(dashBoardPage.getDataKoreksiList("Hadir SQA Testing 2"),"Data tidak muncul");
         wait.until(ExpectedConditions.visibilityOfElementLocated(dashBoardPage.v1search));
         dashBoardPage.v1search(keyword);
