@@ -122,4 +122,19 @@ public class CompositeActionBuilder {
         }
         return results;
     }
+
+    public CompositeActionBuilder exportAction() {
+        actions.add(new ExportAction());
+        return this;
+    }
+
+    public CompositeActionBuilder exportCancel() {
+        actions.add(new ExportCancel());
+        return this;
+    }
+
+    public CompositeActionBuilder sleep(long millis) {
+        actions.add(new SleepAction(millis));
+        return this;
+    }
 }

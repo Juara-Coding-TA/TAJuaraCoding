@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "https://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>TestNG Report</title>
+<style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}.invisible {display:none}</style>
+</head>
+<body>
+<table>
+<tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
+<tr><th colspan="8">Hadir</th></tr>
+<tr><td><a href="#t0">Login Tests</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">7</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t1">Laporan Tests</a></td><td class="num">4</td><td class="num">0</td><td class="num">0</td><td class="num attn">7</td><td class="num">200,301</td><td></td><td></td></tr>
+<tr><td><a href="#t2">Dashboard Tests</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td></td><td></td></tr>
+<tr><th>Total</th><th class="num">4</th><th class="num">0</th><th class="num">0</th><th class="num attn">7</th><th class="num">200,308</th><th colspan="2"></th></tr>
+</table>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Hadir</th></tr></tbody><tbody id="t0"><tr><th colspan="4" class="invisible"/></tr></tbody>
+<tbody id="t1"><tr><th colspan="4">Laporan Tests &#8212; failed</th></tr><tr class="failedeven"><td rowspan="7">com.juaracoding.tajuaracoding.laporan.SemuaTest</td><td><a href="#m0">testCombinationFilter</a></td><td rowspan="1">1756253261659</td><td rowspan="1">14822</td></tr><tr class="failedeven"><td><a href="#m1">testNegativeSearch</a></td><td rowspan="1">1756253178658</td><td rowspan="1">5449</td></tr><tr class="failedeven"><td><a href="#m2">testNegativeUnitFilter</a></td><td rowspan="1">1756253226209</td><td rowspan="1">9667</td></tr><tr class="failedeven"><td><a href="#m3">testPositiveSearch</a></td><td rowspan="1">1756253164763</td><td rowspan="1">7241</td></tr><tr class="failedeven"><td><a href="#m4">testPositiveUnitFilter</a></td><td rowspan="1">1756253209547</td><td rowspan="1">10143</td></tr><tr class="failedeven"><td><a href="#m5">testPositiveUnitFilterWithDateRangeFilter</a></td><td rowspan="1">1756253242491</td><td rowspan="1">12727</td></tr><tr class="failedeven"><td><a href="#m6">testStatusCheck</a></td><td rowspan="1">1756253312998</td><td rowspan="1">15951</td></tr><tr><th colspan="4">Laporan Tests &#8212; passed</th></tr><tr class="passedeven"><td rowspan="4">com.juaracoding.tajuaracoding.laporan.SemuaTest</td><td><a href="#m7">testDateRangeFilter</a></td><td rowspan="1">1756253150186</td><td rowspan="1">8400</td></tr><tr class="passedeven"><td><a href="#m8">testPositiveSearchWithDateRangeFilter</a></td><td rowspan="1">1756253191844</td><td rowspan="1">10826</td></tr><tr class="passedeven"><td><a href="#m9">testResetAllFilters</a></td><td rowspan="1">1756253284042</td><td rowspan="1">20744</td></tr><tr class="passedeven"><td><a href="#m10">testSemuaPageVerification</a></td><td rowspan="1">1756253136834</td><td rowspan="1">5665</td></tr></tbody>
+<tbody id="t2"><tr><th colspan="4" class="invisible"/></tr></tbody>
+</table>
+<h2>Login Tests</h2><h2>Laporan Tests</h2><h3 id="m0">com.juaracoding.tajuaracoding.laporan.SemuaTest#testCombinationFilter</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Row doesn&apos;t contain unit Sysmex: SDT
+SPV Dark Tomcat
+Bank Neo Commerce
+07 Mar 1994
+09:37:03
+07 Mar 1994
+18:12:05
+Alamat tidak ditemukan
+Alamat tidak ditemukan
+Work From Office
+-
+- expected [true] but found [false]
+	at com.juaracoding.tajuaracoding.pages.actions.UnitFilterAction.execute(UnitFilterAction.java:70)
+	at com.juaracoding.tajuaracoding.pages.actions.CompositeActionBuilder.execute(CompositeActionBuilder.java:110)
+	at com.juaracoding.tajuaracoding.laporan.SemuaTest.testCombinationFilter(SemuaTest.java:87)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.juaracoding.tajuaracoding.laporan.SemuaTest#testNegativeSearch</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.RuntimeException: Action failed: Search failed: Unable to locate element: #search
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [76e76362-67e9-4c19-9214-f8e5229e7dac, findElement {value=search, using=id}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 142.0, moz:accessibilityChecks: false, moz:buildID: 20250811145442, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 36160, moz:profile: C:\Users\FREDIA~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 76e76362-67e9-4c19-9214-f8e5229e7dac
+	at com.juaracoding.tajuaracoding.pages.actions.CompositeActionBuilder.execute(CompositeActionBuilder.java:112)
+	at com.juaracoding.tajuaracoding.laporan.SemuaTest.testNegativeSearch(SemuaTest.java:40)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.juaracoding.tajuaracoding.laporan.SemuaTest#testNegativeUnitFilter</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Expected no data for unit: UnitNihil expected [false] but found [true]
+	at com.juaracoding.tajuaracoding.pages.actions.UnitFilterAction.execute(UnitFilterAction.java:74)
+	at com.juaracoding.tajuaracoding.pages.actions.CompositeActionBuilder.execute(CompositeActionBuilder.java:110)
+	at com.juaracoding.tajuaracoding.laporan.SemuaTest.testNegativeUnitFilter(SemuaTest.java:65)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.juaracoding.tajuaracoding.laporan.SemuaTest#testPositiveSearch</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Expected to find results for keyword: Hadir
+	at com.juaracoding.tajuaracoding.pages.actions.SearchAction.execute(SearchAction.java:40)
+	at com.juaracoding.tajuaracoding.pages.actions.CompositeActionBuilder.execute(CompositeActionBuilder.java:110)
+	at com.juaracoding.tajuaracoding.laporan.SemuaTest.testPositiveSearch(SemuaTest.java:32)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">com.juaracoding.tajuaracoding.laporan.SemuaTest#testPositiveUnitFilter</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Expected to find data for unit: Sysmex expected [true] but found [false]
+	at com.juaracoding.tajuaracoding.pages.actions.UnitFilterAction.execute(UnitFilterAction.java:67)
+	at com.juaracoding.tajuaracoding.pages.actions.CompositeActionBuilder.execute(CompositeActionBuilder.java:110)
+	at com.juaracoding.tajuaracoding.laporan.SemuaTest.testPositiveUnitFilter(SemuaTest.java:57)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">com.juaracoding.tajuaracoding.laporan.SemuaTest#testPositiveUnitFilterWithDateRangeFilter</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Expected to find data for unit: Sysmex expected [true] but found [false]
+	at com.juaracoding.tajuaracoding.pages.actions.UnitFilterAction.execute(UnitFilterAction.java:67)
+	at com.juaracoding.tajuaracoding.pages.actions.CompositeActionBuilder.execute(CompositeActionBuilder.java:110)
+	at com.juaracoding.tajuaracoding.laporan.SemuaTest.testPositiveUnitFilterWithDateRangeFilter(SemuaTest.java:75)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">com.juaracoding.tajuaracoding.laporan.SemuaTest#testStatusCheck</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Tidak semua status ditemukan. Found: [], Expected: [sakit, cuti, lembur] expected [true] but found [false]
+	at com.juaracoding.tajuaracoding.pages.actions.StatusCheckAction.execute(StatusCheckAction.java:71)
+	at com.juaracoding.tajuaracoding.pages.actions.CompositeActionBuilder.execute(CompositeActionBuilder.java:110)
+	at com.juaracoding.tajuaracoding.laporan.SemuaTest.testStatusCheck(SemuaTest.java:110)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">com.juaracoding.tajuaracoding.laporan.SemuaTest#testDateRangeFilter</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">com.juaracoding.tajuaracoding.laporan.SemuaTest#testPositiveSearchWithDateRangeFilter</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">com.juaracoding.tajuaracoding.laporan.SemuaTest#testResetAllFilters</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m10">com.juaracoding.tajuaracoding.laporan.SemuaTest#testSemuaPageVerification</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Dashboard Tests</h2></body>
+</html>
