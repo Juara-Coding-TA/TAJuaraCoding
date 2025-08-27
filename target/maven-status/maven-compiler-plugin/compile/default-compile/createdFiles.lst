@@ -11,12 +11,10 @@ com\juaracoding\tajuaracoding\pages\actions\ExportAction.class
 com\juaracoding\tajuaracoding\pages\actions\ResetFilterAction.class
 com\juaracoding\tajuaracoding\utils\DriverUtil.class
 com\juaracoding\tajuaracoding\pages\actions\CompositeActionBuilder.class
-com\juaracoding\tajuaracoding\pages\laporan\SemuaPage.class
 com\juaracoding\tajuaracoding\pages\actions\CompositeActionBuilder$1.class
 com\juaracoding\tajuaracoding\pages\login\LoginPage.class
 com\juaracoding\tajuaracoding\pages\actions\StatusCheckAction.class
 com\juaracoding\tajuaracoding\pages\actions\CompositeAction.class
 com\juaracoding\tajuaracoding\pages\actions\DateFilterAction.class
-com\juaracoding\tajuaracoding\pages\laporan\KehadiranPage.class
 com\juaracoding\tajuaracoding\pages\actions\TotalDataAction.class
 com\juaracoding\tajuaracoding\pages\actions\PageVerificationAction.class

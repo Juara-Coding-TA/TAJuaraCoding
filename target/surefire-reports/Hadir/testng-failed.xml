@@ -6,19 +6,62 @@
   <parameter name="username" value="admin@hadir.com"/>
   <test thread-count="5" name="Laporan Tests(failed)" verbose="0">
     <classes>
+      <class name="com.juaracoding.tajuaracoding.laporan.IzinPulangCepatTest">
+        <methods>
+          <include name="teardown"/>
+          <include name="testNegativeUnitFilter"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.juaracoding.tajuaracoding.laporan.IzinPulangCepatTest -->
       <class name="com.juaracoding.tajuaracoding.laporan.SemuaTest">
         <methods>
+          <include name="testResetAllFilters"/>
           <include name="testStatusCheck"/>
           <include name="testNegativeUnitFilter"/>
-          <include name="testPositiveUnitFilterWithDateRangeFilter"/>
           <include name="testCombinationFilter"/>
-          <include name="testPositiveSearch"/>
           <include name="teardown"/>
-          <include name="testNegativeSearch"/>
-          <include name="testPositiveUnitFilter"/>
           <include name="setup"/>
         </methods>
       </class> <!-- com.juaracoding.tajuaracoding.laporan.SemuaTest -->
+      <class name="com.juaracoding.tajuaracoding.laporan.IzinTerlambatTest">
+        <methods>
+          <include name="teardown"/>
+          <include name="testNegativeUnitFilter"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.juaracoding.tajuaracoding.laporan.IzinTerlambatTest -->
+      <class name="com.juaracoding.tajuaracoding.laporan.CutiTest">
+        <methods>
+          <include name="testNegativeUnitFilter"/>
+          <include name="teardown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.juaracoding.tajuaracoding.laporan.CutiTest -->
+      <class name="com.juaracoding.tajuaracoding.laporan.KehadiranTest">
+        <methods>
+          <include name="teardown"/>
+          <include name="testCombinationFilter"/>
+          <include name="testPositiveUnitFilterWithDateRangeFilter"/>
+          <include name="testNegativeUnitFilter"/>
+          <include name="setup"/>
+          <include name="testStatusCheck"/>
+        </methods>
+      </class> <!-- com.juaracoding.tajuaracoding.laporan.KehadiranTest -->
     </classes>
   </test> <!-- Laporan Tests(failed) -->
+  <test thread-count="5" name="Dashboard Tests(failed)" verbose="0">
+    <classes>
+      <class name="com.juaracoding.tajuaracoding.Dashboard.PendingDashboardTest">
+        <methods>
+          <include name="Positive_v1koreksisearchTest"/>
+          <include name="reset_v1koreksisearchTest"/>
+          <include name="teardown"/>
+          <include name="validator1koreksiTest"/>
+          <include name="Negative_v1koreksisearchTest"/>
+          <include name="negativeTestFilterByUnit"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.juaracoding.tajuaracoding.Dashboard.PendingDashboardTest -->
+    </classes>
+  </test> <!-- Dashboard Tests(failed) -->
 </suite> <!-- Failed suite [Hadir] -->

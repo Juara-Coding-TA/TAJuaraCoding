@@ -21,10 +21,12 @@ public class ResetFilterAction implements CompositeAction {
             
             // Verify all fields are cleared
             String searchValue = driver.findElement(By.id("search")).getAttribute("value");
+            String unitNameValue = driver.findElement(By.xpath("//input[@id='job_departement']")).getAttribute("value");
             String startDateValue = driver.findElement(By.xpath("(//input[@placeholder='Start Date'])[1]")).getAttribute("value");
             String endDateValue = driver.findElement(By.xpath("(//input[@placeholder='End Date'])[1]")).getAttribute("value");
             
             Assert.assertTrue(searchValue == null || searchValue.isEmpty(), "Search field tidak kosong setelah reset");
+            Assert.assertTrue(unitNameValue == null || unitNameValue.isEmpty(), "Unit Name tidak kosong setelah reset");
             Assert.assertTrue(startDateValue == null || startDateValue.isEmpty(), "Start Date tidak kosong setelah reset");
             Assert.assertTrue(endDateValue == null || endDateValue.isEmpty(), "End Date tidak kosong setelah reset");
             
