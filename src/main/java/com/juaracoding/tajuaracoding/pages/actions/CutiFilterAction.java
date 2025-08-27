@@ -50,9 +50,9 @@ public class CutiFilterAction implements CompositeAction {
             if (!options.isEmpty()) {
                 wait.until(ExpectedConditions.visibilityOf(options.get(0)));
                 options.get(0).click();
-                System.out.println("✅ Klik dropdown: " + unitName);
+                System.out.println("Klik dropdown: " + unitName);
             } else {
-                System.out.println("⚠️ Option '" + unitName + "' tidak ditemukan, lanjut klik Terapkan");
+                System.out.println("Option '" + unitName + "' tidak ditemukan, lanjut klik Terapkan");
             }
             
             // Klik tombol Terapkan
@@ -71,25 +71,25 @@ public class CutiFilterAction implements CompositeAction {
             if (expectResults) {
                 if (totalRecordsAfterFilter > 0) {
                     completed = true;
-                    result = "✅ Filter sukses: ditemukan " + totalRecordsAfterFilter 
+                    result = "Filter sukses: ditemukan " + totalRecordsAfterFilter 
                            + " records (unit ditemukan? " + unitFoundInTable + ")";
                 } else {
                     completed = false;
-                    result = "❌ Filter gagal: tidak ada data untuk " + unitName;
+                    result = "Filter gagal: tidak ada data untuk " + unitName;
                 }
             } else {
                 if (totalRecordsAfterFilter == 0) {
                     completed = true;
-                    result = "✅ Filter sukses: tidak ada data untuk " + unitName + " (sesuai ekspektasi)";
+                    result = "Filter sukses: tidak ada data untuk " + unitName + " (sesuai ekspektasi)";
                 } else {
                     completed = false;
-                    result = "❌ Filter tidak sesuai: ditemukan " + totalRecordsAfterFilter + " records untuk " + unitName;
+                    result = "Filter tidak sesuai: ditemukan " + totalRecordsAfterFilter + " records untuk " + unitName;
                 }
             }
 
         } catch (Exception e) {
             completed = false;
-            result = "❌ Error dalam CutiFilterAction: " + e.getMessage();
+            result = "Error dalam CutiFilterAction: " + e.getMessage();
             e.printStackTrace();
         }
     }

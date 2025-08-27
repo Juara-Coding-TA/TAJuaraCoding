@@ -7,4 +7,5 @@ com\juaracoding\tajuaracoding\login\NegativeLoginTest.class
 com\juaracoding\tajuaracoding\laporan\KehadiranTest.class
 com\juaracoding\tajuaracoding\laporan\CutiTest.class
 com\juaracoding\tajuaracoding\laporan\IzinPulangCepatTest.class
+com\juaracoding\tajuaracoding\login\LogoutTest.class
 com\juaracoding\tajuaracoding\laporan\SemuaTest.class

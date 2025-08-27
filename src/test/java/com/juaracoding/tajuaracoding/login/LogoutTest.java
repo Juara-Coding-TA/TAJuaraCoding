@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 public class LogoutTest extends BaseTest {
 
     @Test
-    public void LogoutTest() throws InterruptedException {
+    public void logoutTest() throws InterruptedException {
         LoginPage loginPage = new LoginPage(DriverUtil.getDriver());
 
         // verifikasi login telah berhasil
