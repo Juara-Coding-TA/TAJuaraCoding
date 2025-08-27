@@ -1,14 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Hadir">
+<suite name="Hadir" parallel="false" verbose="2">
+  
+  <!-- Global parameters -->
   <parameter name="baseURL" value="https://magang.dikahadir.com/authentication/login"/>
   <parameter name="username" value="admin@hadir.com"/>
   <parameter name="password" value="MagangSQA_JC@123"/>
+
+  <!-- Listeners for HTML reporting -->
+  <listeners>
+    <!-- ReportNG listeners for better HTML reports -->
+    <listener class-name="org.uncommons.reportng.HTMLReporter" />
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+    
+    <!-- Custom screenshot listener -->
+    <listener class-name="com.juaracoding.tajuaracoding.listeners.ScreenshotTestListener" />
+  </listeners>
 
   <test name="Login Tests">
     <classes>
       <class name="com.juaracoding.tajuaracoding.login.PositiveLoginTest"/>
       <class name="com.juaracoding.tajuaracoding.login.NegativeLoginTest"/>
+      <class name="com.juaracoding.tajuaracoding.login.LogoutTest"/>
     </classes>
   </test> 
 
