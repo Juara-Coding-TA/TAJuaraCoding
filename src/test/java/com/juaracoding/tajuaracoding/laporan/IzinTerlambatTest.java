@@ -79,7 +79,6 @@ public class IzinTerlambatTest extends BaseTest {
             .execute();
     }
     
-    
     @Test(enabled = true)
     public void testResetAllFilters() {
         new CompositeActionBuilder()

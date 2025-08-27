@@ -50,7 +50,7 @@ public class Navbar {
         dashoard.click();
     }
 
-      public void clickSemua() {
+    public void clickSemua() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         WebElement Semua = wait.until(ExpectedConditions.elementToBeClickable(subMenuSemua));
         Semua.click();

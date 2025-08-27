@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 public class DashboardTest extends BaseTest {
     DashBoardPage dashboard;
 
-    @Test(enabled = false)
+    @Test(enabled = true)
     public void VerificationDashboardTest() throws InterruptedException {
         Navbar navbar = new Navbar(DriverUtil.getDriver());
         navbar.clickDashboard();

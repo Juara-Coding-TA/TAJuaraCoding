@@ -7,15 +7,16 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import com.juaracoding.tajuaracoding.BaseTest;
 import com.juaracoding.tajuaracoding.pages.login.LoginPage;
 import com.juaracoding.tajuaracoding.utils.DriverUtil;
 
-public class PositiveLoginTest extends BaseTest {
+public class PositiveLoginTest {
 
     @Test()
     public void testLogin() throws InterruptedException {
         LoginPage loginPage = new LoginPage(DriverUtil.getDriver());
+
+        loginPage.openLoginPage();
 
         // Input username & password
         loginPage.inputUsername("admin@hadir.com");
