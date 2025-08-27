@@ -6,13 +6,43 @@
   <parameter name="username" value="admin@hadir.com"/>
   <test thread-count="5" name="Laporan Tests(failed)" verbose="0">
     <classes>
+      <class name="com.juaracoding.tajuaracoding.laporan.KehadiranTest">
+        <methods>
+          <include name="testExportFunctionality"/>
+          <include name="teardown"/>
+          <include name="testNegativeUnitFilter"/>
+          <include name="testResetAllFilters"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.juaracoding.tajuaracoding.laporan.KehadiranTest -->
+      <class name="com.juaracoding.tajuaracoding.laporan.IzinPulangCepatTest">
+        <methods>
+          <include name="teardown"/>
+          <include name="testNegativeUnitFilter"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.juaracoding.tajuaracoding.laporan.IzinPulangCepatTest -->
       <class name="com.juaracoding.tajuaracoding.laporan.SemuaTest">
         <methods>
-          <include name="testResetAllFilters"/>
+          <include name="testNegativeUnitFilter"/>
           <include name="teardown"/>
           <include name="setup"/>
         </methods>
       </class> <!-- com.juaracoding.tajuaracoding.laporan.SemuaTest -->
+      <class name="com.juaracoding.tajuaracoding.laporan.IzinTerlambatTest">
+        <methods>
+          <include name="teardown"/>
+          <include name="testNegativeUnitFilter"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.juaracoding.tajuaracoding.laporan.IzinTerlambatTest -->
+      <class name="com.juaracoding.tajuaracoding.laporan.CutiTest">
+        <methods>
+          <include name="testNegativeUnitFilter"/>
+          <include name="teardown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.juaracoding.tajuaracoding.laporan.CutiTest -->
     </classes>
   </test> <!-- Laporan Tests(failed) -->
 </suite> <!-- Failed suite [Hadir] -->

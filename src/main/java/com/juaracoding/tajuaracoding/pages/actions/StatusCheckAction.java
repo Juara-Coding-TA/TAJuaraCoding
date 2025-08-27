@@ -2,6 +2,7 @@ package com.juaracoding.tajuaracoding.pages.actions;
 
 import java.time.Duration;
 import java.util.*;
+import java.util.NoSuchElementException;
 import java.util.stream.Collectors;
 
 import org.openqa.selenium.*;
@@ -26,8 +27,8 @@ public class StatusCheckAction implements CompositeAction {
     };
 
     private final By[] nextButtonLocators = {
-        By.xpath("//button[@aria-label='Go to next page']"),
-        By.xpath("//button[contains(@aria-label, 'next')]"),
+        By.xpath("//button[@title='Go to next page']//*[name()='svg']"),
+        By.xpath("(//*[name()='svg'][@class='MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv'])[4]"),
         By.cssSelector("button[aria-label*='next']"),
         By.cssSelector(".pagination button:last-child")
     };
@@ -53,10 +54,17 @@ public class StatusCheckAction implements CompositeAction {
             int statusColIndex = findStatusColumnIndex();
             if (statusColIndex == -1) throw new RuntimeException("Kolom STATUS tidak ditemukan!");
 
-            // Loop per halaman
+            int page = 1;
+            // Loop semua halaman
             do {
-                foundStatuses.addAll(extractStatusesFromCurrentPage(statusColIndex));
-                if (foundStatuses.containsAll(expectedStatuses)) break;
+                List<String> pageStatuses = extractStatusesFromCurrentPage(statusColIndex);
+                foundStatuses.addAll(pageStatuses);
+                System.out.println("Page " + page++ + " → ditemukan: " + pageStatuses);
+
+                if (foundStatuses.containsAll(expectedStatuses)) {
+                    System.out.println("Semua expected status sudah ditemukan, stop pagination.");
+                    break;
+                }
             } while (goToNextPage());
 
             validateResults(foundStatuses);
@@ -104,18 +112,19 @@ public class StatusCheckAction implements CompositeAction {
         return Collections.emptyList();
     }
 
-    private boolean goToNextPage() {
+    private boolean goToNextPage() throws InterruptedException {
         for (By locator : nextButtonLocators) {
             try {
                 WebElement nextBtn = DriverUtil.getDriver().findElement(locator);
                 if (isClickable(nextBtn)) {
                     scrollTo(nextBtn);
                     nextBtn.click();
-                    Thread.sleep(1500); // sedikit lebih cepat
+                    Thread.sleep(1000); // cukup 1 detik
                     waitForTableToLoad();
                     return true;
                 }
-            } catch (Exception ignored) {}
+            } catch (NoSuchElementException ignored) {}
+              catch (StaleElementReferenceException ignored) {}
         }
         return false;
     }
