@@ -1,10 +1,13 @@
 com\juaracoding\tajuaracoding\pages\actions\UnitFilterAction.class
 com\juaracoding\tajuaracoding\pages\actions\TotalDataAction$ValidationType.class
 com\juaracoding\tajuaracoding\pages\dashboard\DashBoardPage.class
+com\juaracoding\tajuaracoding\pages\actions\ExportCancel.class
 com\juaracoding\tajuaracoding\pages\actions\CutiFilterAction.class
 com\juaracoding\tajuaracoding\pages\actions\NavigationAction.class
 com\juaracoding\tajuaracoding\pages\actions\SearchAction.class
 com\juaracoding\tajuaracoding\pages\components\Navbar.class
+com\juaracoding\tajuaracoding\pages\actions\SleepAction.class
+com\juaracoding\tajuaracoding\pages\actions\ExportAction.class
 com\juaracoding\tajuaracoding\pages\actions\ResetFilterAction.class
 com\juaracoding\tajuaracoding\utils\DriverUtil.class
 com\juaracoding\tajuaracoding\pages\actions\CompositeActionBuilder.class

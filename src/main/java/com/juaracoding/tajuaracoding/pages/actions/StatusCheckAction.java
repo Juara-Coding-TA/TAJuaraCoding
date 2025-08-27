@@ -58,7 +58,7 @@ public class StatusCheckAction implements CompositeAction {
                 WebElement nextBtn = DriverUtil.getDriver().findElement(nextButtonLocator);
                 if (nextBtn.isEnabled() && !nextBtn.getAttribute("class").contains("Mui-disabled")) {
                     nextBtn.click();
-                    Thread.sleep(1000); // bisa diganti WebDriverWait untuk lebih stabil
+                    Thread.sleep(2000); // bisa diganti WebDriverWait untuk lebih stabil
                 } else {
                     break;
                 }
